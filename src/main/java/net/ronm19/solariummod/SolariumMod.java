@@ -1,5 +1,10 @@
 package net.ronm19.solariummod;
 
+import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.neoforge.common.CreativeModeTabRegistry;
+import net.ronm19.solariummod.block.ModBlocks;
+import net.ronm19.solariummod.item.ModCreativeModeTabs;
+import net.ronm19.solariummod.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -30,6 +35,12 @@ public class SolariumMod {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
+        ModCreativeModeTabs.register(modEventBus);
+
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
@@ -58,7 +69,10 @@ public class SolariumMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.SOLARIUM_INGOT);
+            event.accept(ModItems.RAW_SOLARIUM_INGOT);
+        }
     }
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent

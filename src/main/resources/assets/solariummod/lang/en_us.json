@@ -1,0 +1,19 @@
+{
+  "item.solariummod.solarium_ingot": "Solarium Ingot",
+  "item.solariummod.raw_solarium_ingot": "Raw Solarium Ingot",
+  "item.solariummod.solar_fruit": "Solar Fruit",
+
+  "item.solariummod.solarium_chainsaw": "Solarium Chainsaw",
+
+  "itemGroup.solariummod.solarium_items_tab": "Solarium Mod Items",
+  "itemGroup.solariummod.solarium_blocks_tab": "Solarium Mod Blocks",
+
+  "block.solariummod.solar_pylon_block": "Solar Pylon Block",
+  "block.solariummod.solarium_block": "Solarium Block",
+  "block.solariummod.raw_solarium_block": "Raw Solarium Block",
+
+  "block.solariummod.solarium_ore": "Solarium Ore",
+  "block.solariummod.deepslate_solarium_ore": "Deepslate Solarium Ore"
+
+
+}

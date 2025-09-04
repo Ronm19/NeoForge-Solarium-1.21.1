@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "solariummod:block/raw_solarium_block"
+    }
+  }
+}
