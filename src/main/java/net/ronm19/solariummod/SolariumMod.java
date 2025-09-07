@@ -5,6 +5,7 @@ import net.neoforged.neoforge.common.CreativeModeTabRegistry;
 import net.ronm19.solariummod.block.ModBlocks;
 import net.ronm19.solariummod.item.ModCreativeModeTabs;
 import net.ronm19.solariummod.item.ModItems;
+import net.ronm19.solariummod.util.ModDataComponents;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -40,6 +41,9 @@ public class SolariumMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModDataComponents.DATA_COMPONENTS.register(modEventBus);
+
 
 
         // Register ourselves for server and other game events we are interested in.

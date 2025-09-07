@@ -6,6 +6,12 @@
 
   "item.solariummod.solarium_chainsaw": "Solarium Chainsaw",
 
+  "item.solariummod.solarium_sword": "Solarium Sword",
+  "item.solariummod.solarium_pickaxe": "Solarium Pickaxe",
+  "item.solariummod.solarium_axe": "Solarium Axe",
+  "item.solariummod.solarium_shovel": "Solarium Shovel",
+  "item.solariummod.solarium_hoe": "Solarium Hoe",
+
   "itemGroup.solariummod.solarium_items_tab": "Solarium Mod Items",
   "itemGroup.solariummod.solarium_blocks_tab": "Solarium Mod Blocks",
 

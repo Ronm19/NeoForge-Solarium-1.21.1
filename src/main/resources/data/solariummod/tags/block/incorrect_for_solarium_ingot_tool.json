@@ -1,0 +1,8 @@
+{
+ "values": [
+   "#minecraft:incorrect_for_iron_tool"
+ ],
+  "remove": [
+    "#solariummod:needs_solarium_ingot_tool"
+  ]
+}

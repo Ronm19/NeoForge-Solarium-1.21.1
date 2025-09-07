@@ -30,6 +30,12 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.SOLARIUM_CHAINSAW);
 
+                        output.accept(ModItems.SOLARIUM_SWORD);
+                        output.accept(ModItems.SOLARIUM_PICKAXE);
+                        output.accept(ModItems.SOLARIUM_AXE);
+                        output.accept(ModItems.SOLARIUM_SHOVEL);
+                        output.accept(ModItems.SOLARIUM_HOE);
+
                     })
 
                     .build());

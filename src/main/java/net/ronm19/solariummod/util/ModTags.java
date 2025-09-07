@@ -11,7 +11,10 @@ import net.ronm19.solariummod.SolariumMod;
 public class ModTags {
 
     public static class Blocks {
-        private TagKey<Block> createTag(String name) {
+        public static final TagKey<Block> INCORRECT_FOR_SOLARIUM_INGOT_TOOL = createTag("incorrect_for_solarium_ingot_tool");
+        public static final TagKey<Block> NEEDS_SOLARIUM_INGOT_TOOL = createTag("needs_solarium_ingot_tool");
+
+        private static TagKey<Block> createTag(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(SolariumMod.MOD_ID, name));
 
         }

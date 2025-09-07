@@ -2,10 +2,13 @@ package net.ronm19.solariummod.datagen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredItem;
 import net.ronm19.solariummod.SolariumMod;
 import net.ronm19.solariummod.block.ModBlocks;
 import net.ronm19.solariummod.item.ModItems;
@@ -29,6 +32,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.SOLARIUM_WALL, ModBlocks.SOLARIUM_BLOCK);
 
         basicItem(ModBlocks.SOLARIUM_DOOR.asItem());
+
+        handheldItem(ModItems.SOLARIUM_SWORD);
+        handheldItem(ModItems.SOLARIUM_PICKAXE);
+        handheldItem(ModItems.SOLARIUM_AXE);
+        handheldItem(ModItems.SOLARIUM_SHOVEL);
+        handheldItem(ModItems.SOLARIUM_HOE);
 
     }
 
@@ -56,5 +65,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         this.withExistingParent(block.getId().getPath(), mcLoc("block/wall_inventory"))
                 .texture("wall",  ResourceLocation.fromNamespaceAndPath(SolariumMod.MOD_ID,
                         "block/" + baseBlock.getId().getPath()));
+
+
+    }
+
+    private ItemModelBuilder handheldItem(DeferredItem<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/handheld")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(SolariumMod.MOD_ID,"item/" + item.getId().getPath()));
     }
 }
