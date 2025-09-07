@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "solarium_ingot",
+  "ingredient": {
+    "item": "solariummod:deepslate_solarium_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "solariummod:solarium_ingot"
+  }
+}

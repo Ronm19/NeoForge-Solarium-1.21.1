@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "solarium_ingot",
+  "key": {
+    "#": {
+      "item": "solariummod:solarium_ingot"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "solariummod:solarium_stairs"
+  }
+}

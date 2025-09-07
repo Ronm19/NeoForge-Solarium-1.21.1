@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "solariummod:solarium_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "solariummod:solarium_ingot"
+  }
+}

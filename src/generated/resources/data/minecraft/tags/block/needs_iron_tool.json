@@ -1,0 +1,9 @@
+{
+  "values": [
+    "solariummod:solarium_block",
+    "solariummod:raw_solarium_block",
+    "solariummod:solar_pylon_block",
+    "solariummod:solarium_ore",
+    "solariummod:deepslate_solarium_ore"
+  ]
+}

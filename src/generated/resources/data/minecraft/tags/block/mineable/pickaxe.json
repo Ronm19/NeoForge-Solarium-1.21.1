@@ -1,0 +1,16 @@
+{
+  "values": [
+    "solariummod:solarium_block",
+    "solariummod:raw_solarium_block",
+    "solariummod:solar_pylon_block",
+    "solariummod:solarium_ore",
+    "solariummod:deepslate_solarium_ore",
+    "solariummod:solarium_stairs",
+    "solariummod:solarium_slab",
+    "solariummod:solarium_pressure_plate",
+    "solariummod:solarium_button",
+    "solariummod:solarium_wall",
+    "solariummod:solarium_fence",
+    "solariummod:solarium_fence_gate"
+  ]
+}

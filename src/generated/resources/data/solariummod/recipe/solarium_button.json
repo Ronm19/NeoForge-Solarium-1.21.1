@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "solarium_ingot",
+  "ingredients": [
+    {
+      "item": "solariummod:solarium_ingot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "solariummod:solarium_button"
+  }
+}
