@@ -2,6 +2,7 @@
   "item.solariummod.solarium_ingot": "Solarium Ingot",
   "item.solariummod.raw_solarium_ingot": "Raw Solarium Ingot",
   "item.solariummod.solar_fruit": "Solar Fruit",
+  "item.solariummod.solar_ember": "Solar Ember",
 
   "item.solariummod.solarium_chainsaw": "Solarium Chainsaw",
 
@@ -13,7 +14,22 @@
   "block.solariummod.raw_solarium_block": "Raw Solarium Block",
 
   "block.solariummod.solarium_ore": "Solarium Ore",
-  "block.solariummod.deepslate_solarium_ore": "Deepslate Solarium Ore"
+  "block.solariummod.deepslate_solarium_ore": "Deepslate Solarium Ore",
+
+  "block.solariummod.solarium_stairs": "Solarium Stairs",
+  "block.solariummod.solarium_slab": "Solarium Slab",
+  "block.solariummod.solarium_button": "Solarium Button",
+  "block.solariummod.solarium_pressure_plate": "Solarium Pressure Plate",
+  "block.solariummod.solarium_fence": "Solarium Fence",
+  "block.solariummod.solarium_fence_gate": "Solarium Fence Gate",
+  "block.solariummod.solarium_wall": "Solarium Wall",
+
+
+  "tooltip.solariummod.solarium_chainsaw.tooltip_shift": "Press §eShift§r for more Information",
+  "tooltip.solariummod.solarium_chainsaw.tooltip_1": "This is the chainsaw the was created to cause chaos in the woods! Press Right Click to activate.",
+  "tooltip.solariummod.solarium_chainsaw.tooltip_2": "§oSolarium Chainsaw§  will destroy this forest...§r",
+
+  "tooltip.solariummod.solar_pylon_block.tooltip.1": "This Block can be used for as a secondary redstone powering block during the day."
 
 
 }

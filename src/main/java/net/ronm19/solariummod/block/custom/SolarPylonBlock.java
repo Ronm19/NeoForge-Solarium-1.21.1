@@ -2,7 +2,12 @@ package net.ronm19.solariummod.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.Style;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LightLayer;
@@ -12,9 +17,14 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.server.level.ServerLevel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.List;
 
 public class SolarPylonBlock extends Block {
     public static final IntegerProperty POWER = BlockStateProperties.POWER; // 0..15
+    private static final Logger log = LoggerFactory.getLogger(SolarPylonBlock.class);
 
     public SolarPylonBlock(Properties props) {
         super(props);
@@ -40,8 +50,27 @@ public class SolarPylonBlock extends Block {
     @Override
     public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         updatePower(level, pos, state);
-        level.scheduleTick(pos, this, 20);
+        level.getBlockTicks();
+        int skylight = level.getBrightness(LightLayer.SKY, pos.above());
+
+
+        // Store sunlight during day
+        int newPower = skylight;
+
+        // At night, you can still use the stored value (optional: reduce by 1 each tick to simulate decay)
+        if (skylight == 0) {
+            newPower = Math.max(0, state.getValue(POWER) - 1);
+        }
+
+        level.setBlock(pos, state.setValue(POWER, newPower), 3);
+
+        // Notify redstone neighbors
+        level.updateNeighborsAt(pos, this);
+
+        // Schedule next tick
+        level.getBlockTicks().hasScheduledTick(pos, this); // every second
     }
+
 
     // Also update quickly if neighbors change (optional but snappier)
     @Override
@@ -73,7 +102,7 @@ public class SolarPylonBlock extends Block {
     }
 
     @Override
-    public int getSignal(BlockState state, BlockGetter level, BlockPos pos, Direction side) {
+    public int getSignal(BlockState state, BlockGetter world, BlockPos pos, Direction side) {
         return state.getValue(POWER);
     }
 
@@ -87,4 +116,11 @@ public class SolarPylonBlock extends Block {
         return state.getValue(POWER); // or some mapping you prefer
     }
 
+    @Override
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+
+       tooltipComponents.add(Component.translatable("tooltip.solariummod.solar_pylon_block.tooltip.1"));
+
+        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+    }
 }

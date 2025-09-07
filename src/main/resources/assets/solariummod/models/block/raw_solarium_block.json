@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "solariummod:block/raw_solarium_block"
-  }
-}

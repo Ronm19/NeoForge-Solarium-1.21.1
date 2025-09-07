@@ -5,6 +5,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.ronm19.solariummod.SolariumMod;
+import net.ronm19.solariummod.item.custom.FuelItem;
 import net.ronm19.solariummod.item.custom.SolariumChainsawItem;
 
 public class ModItems {
@@ -16,6 +17,8 @@ public class ModItems {
 
     public static final DeferredItem<Item> SOLAR_FRUIT =
             ITEMS.registerItem("solar_fruit", Item::new, new Item.Properties().food(ModFoodProperties.SOLAR_FRUIT));
+public static final DeferredItem<Item> SOLAR_EMBER =
+            ITEMS.registerItem("solar_ember", properties -> new FuelItem(properties, 1600), new Item.Properties());
 
     public static final DeferredItem<Item> SOLARIUM_CHAINSAW =
             ITEMS.registerItem("solarium_chainsaw", SolariumChainsawItem::new, new Item.Properties().durability(2030));

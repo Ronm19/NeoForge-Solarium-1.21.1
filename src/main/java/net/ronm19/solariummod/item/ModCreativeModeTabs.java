@@ -26,6 +26,8 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.SOLAR_FRUIT);
 
+                        output.accept(ModItems.SOLAR_EMBER);
+
                         output.accept(ModItems.SOLARIUM_CHAINSAW);
 
                     })
@@ -40,9 +42,21 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.SOLARIUM_BLOCK);
                         output.accept(ModBlocks.RAW_SOLARIUM_BLOCK);
+
                         output.accept(ModBlocks.SOLARIUM_ORE);
                         output.accept(ModBlocks.DEEPSLATE_SOLARIUM_ORE);
+
                         output.accept(ModBlocks.SOLAR_PYLON_BLOCK);
+
+                        output.accept(ModBlocks.SOLARIUM_STAIRS);
+                        output.accept(ModBlocks.SOLARIUM_SLAB);
+
+                        output.accept(ModBlocks.SOLARIUM_FENCE);
+                        output.accept(ModBlocks.SOLARIUM_FENCE_GATE);
+                        output.accept(ModBlocks.SOLARIUM_WALL);
+
+                        output.accept(ModBlocks.SOLARIUM_PRESSURE_PLATE);
+                        output.accept(ModBlocks.SOLARIUM_BUTTON);
 
                     })
                     .build());

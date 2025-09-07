@@ -9,8 +9,8 @@ public class ModFoodProperties {
             .nutrition(5) // restores 1.5 hunger bars
             .saturationModifier(0.35f)
             .alwaysEdible()
-            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 100, 0), 1.0f) // 5 seconds
-            .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 60, 0), 1.0f) // 3 seconds
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 600, 0), 1.0f) // 5 seconds
+            .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600, 0), 1.0f) // 3 seconds
             .build();
 
 

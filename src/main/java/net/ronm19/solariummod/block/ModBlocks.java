@@ -3,9 +3,10 @@ package net.ronm19.solariummod.block;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -34,6 +35,24 @@ public static final DeferredBlock<Block> SOLARIUM_ORE = registerBlock("solarium_
 
     public static final DeferredBlock<Block> SOLAR_PYLON_BLOCK = registerBlock("solar_pylon_block",
             () -> new SolarPylonBlock(BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<Block> SOLARIUM_STAIRS = registerBlock("solarium_stairs",
+            () -> new StairBlock(ModBlocks.SOLARIUM_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of().strength(4f).
+                    requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> SOLARIUM_SLAB = registerBlock("solarium_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<Block> SOLARIUM_PRESSURE_PLATE = registerBlock("solarium_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> SOLARIUM_BUTTON = registerBlock("solarium_button",
+            () -> new ButtonBlock(BlockSetType.IRON, 10, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noCollission()));
+
+    public static final DeferredBlock<Block> SOLARIUM_FENCE = registerBlock("solarium_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> SOLARIUM_FENCE_GATE = registerBlock("solarium_fence_gate",
+            () -> new FenceGateBlock(WoodType.ACACIA,BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> SOLARIUM_WALL = registerBlock("solarium_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
 
     private static <T extends Block>DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

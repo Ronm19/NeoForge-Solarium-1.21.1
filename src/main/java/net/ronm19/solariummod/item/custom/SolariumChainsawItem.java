@@ -1,18 +1,22 @@
 package net.ronm19.solariummod.item.custom;
 
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseFireBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.Stack;
 
@@ -104,5 +108,18 @@ public class SolariumChainsawItem extends Item {
         }
 
         return leaves;
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        if(Screen.hasShiftDown()) {
+            tooltipComponents.add(Component.translatable("tooltip.solariummod.solarium_chainsaw.tooltip_1"));
+            tooltipComponents.add(Component.translatable("tooltip.solariummod.solarium_chainsaw.tooltip_2"));
+
+        } else {
+            tooltipComponents.add(Component.translatable("tooltip.solariummod.solarium_chainsaw.tooltip_shift"));
+        }
+
+        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
     }
 }

@@ -1,0 +1,57 @@
+package net.ronm19.solariummod.datagen;
+
+import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
+import net.ronm19.solariummod.SolariumMod;
+import net.ronm19.solariummod.block.ModBlocks;
+import net.ronm19.solariummod.item.ModItems;
+
+public class ModItemModelProvider extends ItemModelProvider {
+    public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, SolariumMod.MOD_ID, existingFileHelper);
+    }
+
+    @Override
+    protected void registerModels() {
+        basicItem(ModItems.RAW_SOLARIUM_INGOT.get());
+        basicItem(ModItems.SOLARIUM_INGOT.get());
+        basicItem(ModItems.SOLAR_EMBER.get());
+        basicItem(ModItems.SOLAR_FRUIT.get());
+        basicItem(ModItems.SOLARIUM_CHAINSAW.get());
+
+        buttonItem(ModBlocks.SOLARIUM_BUTTON, ModBlocks.SOLARIUM_BLOCK);
+        fenceItem(ModBlocks.SOLARIUM_FENCE, ModBlocks.SOLARIUM_BLOCK);
+        fenceGateItem(ModBlocks.SOLARIUM_FENCE_GATE, ModBlocks.SOLARIUM_BLOCK);
+        wallItem(ModBlocks.SOLARIUM_WALL, ModBlocks.SOLARIUM_BLOCK);
+    }
+
+    public void buttonItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/button_inventory"))
+                .texture("texture", ResourceLocation.fromNamespaceAndPath(SolariumMod.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
+    }
+
+    public void fenceItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(SolariumMod.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
+
+    }
+
+    public void fenceGateItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/template_fence_gate"))
+                .texture("texture", ResourceLocation.fromNamespaceAndPath(SolariumMod.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()
+                ));
+    }
+
+    public void wallItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/wall_inventory"))
+                .texture("wall",  ResourceLocation.fromNamespaceAndPath(SolariumMod.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
+    }
+}
