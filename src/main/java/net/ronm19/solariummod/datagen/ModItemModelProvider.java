@@ -27,6 +27,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         fenceItem(ModBlocks.SOLARIUM_FENCE, ModBlocks.SOLARIUM_BLOCK);
         fenceGateItem(ModBlocks.SOLARIUM_FENCE_GATE, ModBlocks.SOLARIUM_BLOCK);
         wallItem(ModBlocks.SOLARIUM_WALL, ModBlocks.SOLARIUM_BLOCK);
+
+        basicItem(ModBlocks.SOLARIUM_DOOR.asItem());
+
     }
 
     public void buttonItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {

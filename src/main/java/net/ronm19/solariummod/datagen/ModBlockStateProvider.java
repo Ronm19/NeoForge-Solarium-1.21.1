@@ -30,6 +30,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceGateBlock(((FenceGateBlock) ModBlocks.SOLARIUM_FENCE_GATE.get()), blockTexture(ModBlocks.SOLARIUM_BLOCK.get()));
         wallBlock(((WallBlock) ModBlocks.SOLARIUM_WALL.get()), blockTexture(ModBlocks.SOLARIUM_BLOCK.get()));
 
+        doorBlockWithRenderType(((DoorBlock) ModBlocks.SOLARIUM_DOOR.get()), modLoc("block/solarium_door_bottom"), modLoc("block/solarium_door_top"), "cutout");
+        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.SOLARIUM_TRAPDOOR.get()), modLoc("block/solarium_trapdoor"), true, "cutout");
+
         pressurePlateBlock(((PressurePlateBlock) ModBlocks.SOLARIUM_PRESSURE_PLATE.get()), blockTexture(ModBlocks.SOLARIUM_BLOCK.get()));
         buttonBlock(((ButtonBlock) ModBlocks.SOLARIUM_BUTTON.get()), blockTexture(ModBlocks.SOLARIUM_BLOCK.get()));
 
@@ -37,6 +40,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.SOLARIUM_SLAB);
 
         blockItem(ModBlocks.SOLARIUM_PRESSURE_PLATE);
+
+        blockItem(ModBlocks.SOLARIUM_TRAPDOOR, "_bottom");
     }
 
     private void blockWithItem(DeferredBlock<Block> deferredBlock) {
@@ -45,5 +50,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private void blockItem(DeferredBlock<Block> deferredBlock) {
         simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("solariummod:block/" + deferredBlock.getId().getPath()));
+    }
+
+    private void blockItem(DeferredBlock<Block> deferredBlock, String appendix) {
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("solariummod:block/" + deferredBlock.getId().getPath() + appendix));
     }
 }

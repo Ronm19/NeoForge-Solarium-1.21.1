@@ -18,6 +18,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+
+        this.tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(ModBlocks.SOLARIUM_DOOR.get())
+                .add(ModBlocks.SOLARIUM_TRAPDOOR.get());
+
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.SOLARIUM_BLOCK.get())
                 .add(ModBlocks.RAW_SOLARIUM_BLOCK.get())

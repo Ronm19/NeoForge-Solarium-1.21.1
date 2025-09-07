@@ -23,6 +23,8 @@
   "block.solariummod.solarium_fence": "Solarium Fence",
   "block.solariummod.solarium_fence_gate": "Solarium Fence Gate",
   "block.solariummod.solarium_wall": "Solarium Wall",
+  "block.solariummod.solarium_door": "Solarium Door",
+  "block.solariummod.solarium_trapdoor": "Solarium Trapdoor",
 
 
   "tooltip.solariummod.solarium_chainsaw.tooltip_shift": "Press §eShift§r for more Information",

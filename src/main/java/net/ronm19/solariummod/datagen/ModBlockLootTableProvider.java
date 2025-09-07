@@ -49,6 +49,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.SOLARIUM_FENCE_GATE.get());
         dropSelf(ModBlocks.SOLARIUM_WALL.get());
 
+        dropSelf(ModBlocks.SOLARIUM_TRAPDOOR.get());
+        this.add(ModBlocks.SOLARIUM_DOOR.get(),
+                block -> createDoorTable(ModBlocks.SOLARIUM_DOOR.get()));
+
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block block, Item item, float minDrops, float maxDrops) {

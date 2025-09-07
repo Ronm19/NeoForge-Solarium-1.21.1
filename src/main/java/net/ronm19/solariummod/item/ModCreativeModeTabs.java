@@ -58,6 +58,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SOLARIUM_PRESSURE_PLATE);
                         output.accept(ModBlocks.SOLARIUM_BUTTON);
 
+                        output.accept(ModBlocks.SOLARIUM_DOOR);
+                        output.accept(ModBlocks.SOLARIUM_TRAPDOOR);
+
                     })
                     .build());
 
