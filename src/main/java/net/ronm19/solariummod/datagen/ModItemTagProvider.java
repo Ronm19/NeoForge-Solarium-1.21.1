@@ -3,9 +3,11 @@ package net.ronm19.solariummod.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.ronm19.solariummod.SolariumMod;
+import net.ronm19.solariummod.item.ModItems;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -18,6 +20,10 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-
+        this.tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.SOLARIUM_HELMET.asItem())
+                .add(ModItems.SOLARIUM_CHESTPLATE.asItem())
+                .add(ModItems.SOLARIUM_LEGGINGS.asItem())
+                .add(ModItems.SOLARIUM_BOOTS.asItem());
     }
 }

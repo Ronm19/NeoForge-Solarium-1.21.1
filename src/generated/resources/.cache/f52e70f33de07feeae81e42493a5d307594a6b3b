@@ -1,7 +1,8 @@
-// 1.21.1	2025-09-07T12:06:46.9586329	Tags for minecraft:block mod id solariummod
+// 1.21.1	2025-09-08T09:47:12.6324716	Tags for minecraft:block mod id solariummod
 7944e88e42c5a4e3c12e515c391739f3c02cabd7 data/minecraft/tags/block/fences.json
 a3d707ae825ecab69c589d0f0ba67f80b9732c53 data/minecraft/tags/block/fence_gates.json
 5580a870113d26b7af3ef1bf7055b2bc79fb1fa6 data/minecraft/tags/block/mineable/axe.json
 651c58feaa618036e4865b8c41bc8e84cf0bd7ea data/minecraft/tags/block/mineable/pickaxe.json
 40d9b1211e3e479c7020236af56581dbf2172533 data/minecraft/tags/block/needs_iron_tool.json
 3799e2c6ca438c4722fdc10a52eeaaba6ea5fd3a data/minecraft/tags/block/walls.json
+13cf1fe06cf159d32d074144254a0d375f6b20e7 data/solariummod/tags/block/mineable/solarium_paxel.json

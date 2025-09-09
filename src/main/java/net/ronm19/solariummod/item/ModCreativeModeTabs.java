@@ -36,6 +36,17 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SOLARIUM_SHOVEL);
                         output.accept(ModItems.SOLARIUM_HOE);
 
+                        output.accept(ModItems.SOLARIUM_PAXEL);
+                        output.accept(ModItems.SOLARIUM_HAMMER);
+                        output.accept(ModItems.SOLARIUM_DAGGER);
+
+                        output.accept(ModItems.SOLARIUM_HELMET);
+                        output.accept(ModItems.SOLARIUM_CHESTPLATE);
+                        output.accept(ModItems.SOLARIUM_LEGGINGS);
+                        output.accept(ModItems.SOLARIUM_BOOTS);
+
+                        output.accept(ModItems.SOLARIUM_HORSE_ARMOR);
+
                     })
 
                     .build());

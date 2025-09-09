@@ -3,6 +3,7 @@ package net.ronm19.solariummod;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.neoforge.common.CreativeModeTabRegistry;
 import net.ronm19.solariummod.block.ModBlocks;
+import net.ronm19.solariummod.item.ModArmorMaterials;
 import net.ronm19.solariummod.item.ModCreativeModeTabs;
 import net.ronm19.solariummod.item.ModItems;
 import net.ronm19.solariummod.util.ModDataComponents;
@@ -43,6 +44,8 @@ public class SolariumMod {
         ModBlocks.register(modEventBus);
 
         ModDataComponents.DATA_COMPONENTS.register(modEventBus);
+
+        ModArmorMaterials.register(modEventBus);
 
 
 

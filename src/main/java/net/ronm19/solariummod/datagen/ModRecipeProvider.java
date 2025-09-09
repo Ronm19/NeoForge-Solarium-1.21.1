@@ -92,6 +92,57 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('T', Items.STICK)
                 .unlockedBy("has_solarium_ingot", has(ModItems.SOLARIUM_INGOT.get())).save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.SOLARIUM_DAGGER.get())
+                .pattern(" S ")
+                .pattern(" T ")
+                .define('S', ModItems.SOLARIUM_INGOT.get())
+                .define('T', Items.STICK)
+                .unlockedBy("has_solarium_ingot", has(ModItems.SOLARIUM_DAGGER.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.SOLARIUM_PAXEL.get())
+                .pattern("SSS")
+                .pattern("ST ")
+                .pattern(" T ")
+                .define('S', ModItems.SOLARIUM_INGOT.get())
+                .define('T', Items.STICK)
+                .unlockedBy("has_solarium_ingot", has(ModItems.SOLARIUM_INGOT.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.SOLARIUM_HAMMER.get())
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern(" T ")
+                .define('S', ModItems.SOLARIUM_INGOT.get())
+                .define('T', Items.STICK)
+                .unlockedBy("has_solarium_ingot", has(ModItems.SOLARIUM_INGOT.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.SOLARIUM_HELMET.get())
+                .pattern("SSS")
+                .pattern("S S")
+                .pattern("   ")
+                .define('S', ModItems.SOLARIUM_INGOT.get())
+                .unlockedBy("has_solarium_ingot", has(ModItems.SOLARIUM_INGOT.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.SOLARIUM_CHESTPLATE.get())
+                .pattern("S S")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModItems.SOLARIUM_INGOT.get())
+                .unlockedBy("has_solarium_ingot", has(ModItems.SOLARIUM_INGOT.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.SOLARIUM_LEGGINGS.get())
+                .pattern("SSS")
+                .pattern("S S")
+                .pattern("S S")
+                .define('S', ModItems.SOLARIUM_INGOT.get())
+                .unlockedBy("has_solarium_ingot", has(ModItems.SOLARIUM_INGOT.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.SOLARIUM_BOOTS.get())
+                .pattern("   ")
+                .pattern("S S")
+                .pattern("S S")
+                .define('S', ModItems.SOLARIUM_INGOT.get())
+                .unlockedBy("has_solarium_ingot", has(ModItems.SOLARIUM_INGOT.get())).save(recipeOutput);
+
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SOLARIUM_INGOT.get(), 9)
                 .requires(ModBlocks.SOLARIUM_BLOCK.get())

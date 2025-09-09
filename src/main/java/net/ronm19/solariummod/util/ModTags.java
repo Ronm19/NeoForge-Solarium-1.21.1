@@ -14,6 +14,8 @@ public class ModTags {
         public static final TagKey<Block> INCORRECT_FOR_SOLARIUM_INGOT_TOOL = createTag("incorrect_for_solarium_ingot_tool");
         public static final TagKey<Block> NEEDS_SOLARIUM_INGOT_TOOL = createTag("needs_solarium_ingot_tool");
 
+        public static final TagKey<Block> SOLARIUM_PAXEL_MINEABLE =  createTag("mineable/solarium_paxel");
+
         private static TagKey<Block> createTag(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(SolariumMod.MOD_ID, name));
 
@@ -24,6 +26,7 @@ public class ModTags {
     public static class Items {
         private TagKey<Item> createTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(SolariumMod.MOD_ID, name));
+
 
         }
     }

@@ -7,6 +7,7 @@ import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.ronm19.solariummod.SolariumMod;
 import net.ronm19.solariummod.block.ModBlocks;
+import net.ronm19.solariummod.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -47,6 +48,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.FENCES).add(ModBlocks.SOLARIUM_FENCE.get());
         tag(BlockTags.FENCE_GATES).add(ModBlocks.SOLARIUM_FENCE_GATE.get());
         tag(BlockTags.WALLS).add(ModBlocks.SOLARIUM_WALL.get());
+
+        this.tag(ModTags.Blocks.SOLARIUM_PAXEL_MINEABLE)
+                .addTag(BlockTags.MINEABLE_WITH_AXE)
+                .addTag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .addTag(BlockTags.MINEABLE_WITH_SHOVEL);
 
     }
 }

@@ -5,12 +5,23 @@
   "item.solariummod.solar_ember": "Solar Ember",
 
   "item.solariummod.solarium_chainsaw": "Solarium Chainsaw",
+  "item.solariummod.solarium_paxel": "Solarium Paxel",
+  "item.solariummod.solarium_hammer": "Solarium Hammer",
+  "item.solariummod.solarium_dagger": "Solarium Dagger",
 
   "item.solariummod.solarium_sword": "Solarium Sword",
   "item.solariummod.solarium_pickaxe": "Solarium Pickaxe",
   "item.solariummod.solarium_axe": "Solarium Axe",
   "item.solariummod.solarium_shovel": "Solarium Shovel",
   "item.solariummod.solarium_hoe": "Solarium Hoe",
+
+  "item.solariummod.solarium_helmet": "Solarium Helmet",
+  "item.solariummod.solarium_chestplate": "Solarium Chestplate",
+  "item.solariummod.solarium_leggings": "Solarium Leggings",
+  "item.solariummod.solarium_boots": "Solarium Boots",
+
+  "item.solariummod.solarium_horse_armor": "Solarium Horse Armor",
+
 
   "itemGroup.solariummod.solarium_items_tab": "Solarium Mod Items",
   "itemGroup.solariummod.solarium_blocks_tab": "Solarium Mod Blocks",
@@ -37,7 +48,9 @@
   "tooltip.solariummod.solarium_chainsaw.tooltip_1": "This is the chainsaw the was created to cause chaos in the woods! Press Right Click to activate.",
   "tooltip.solariummod.solarium_chainsaw.tooltip_2": "§oSolarium Chainsaw§  will destroy this forest...§r",
 
-  "tooltip.solariummod.solar_pylon_block.tooltip.1": "This Block can be used for as a secondary redstone powering block during the day."
+  "tooltip.solariummod.solar_pylon_block.tooltip.1": "This Block can be used for as a secondary redstone powering block during the day.",
 
-
+  "tooltip.solariummod.solarium_hammer.tooltip_shift":"Press §eShift§r for more Information",
+  "tooltip.solariummod.solarium_hammer.tooltip_1": "Mine them all!",
+  "tooltip.solariummod.solarium_hammer.tooltip_2": "§oSolarium Hammer§  will destroy their flashes...§r"
 }
