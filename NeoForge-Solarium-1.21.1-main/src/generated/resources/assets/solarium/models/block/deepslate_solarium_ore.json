@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "solarium:block/deepslate_solarium_ore"
+  }
+}
