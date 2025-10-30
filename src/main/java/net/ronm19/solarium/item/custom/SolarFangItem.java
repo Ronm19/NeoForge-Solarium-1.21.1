@@ -15,9 +15,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
-import net.ronm19.solariummod.api.interfaces.IgniteableItem;
 
-public class SolarFangItem extends Item implements IgniteableItem {
+public class SolarFangItem extends Item {
 
     public SolarFangItem(Properties properties) {
         super(properties);
@@ -84,8 +83,7 @@ public class SolarFangItem extends Item implements IgniteableItem {
         world.playSound(null, player.getX(), player.getY(), player.getZ(),
                 SoundEvents.BLAZE_SHOOT, SoundSource.PLAYERS, 1.0F, 1.0F);
     }
-
-    @Override
+    
     public boolean hurtEnemy(ItemStack stack, LivingEntity target, Player attacker) {
         // Set the target on fire for 5 seconds
         target.igniteForTicks(5);

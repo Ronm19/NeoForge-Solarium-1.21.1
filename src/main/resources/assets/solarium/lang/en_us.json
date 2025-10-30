@@ -12,5 +12,8 @@
   "block.solarium.solar_ember_block": "Solar Ember Block",
 
   "itemGroup.solarium.solarium_mod_items_tab": "Solarium Mod Items",
-  "itemGroup.solarium.solarium_mod_blocks_tab": "Solarium Mod Blocks"
+  "itemGroup.solarium.solarium_mod_blocks_tab": "Solarium Mod Blocks",
+  "tooltip.solariummod.solarium_hammer.tooltip_1": "This Tool can cause distraction",
+  "tooltip.solariummod.solarium_hammer.tooltip_2": "Can be useful if you need to dig a lot.",
+  "tooltip.solariummod.solarium_hammer.tooltip_shift": "This thing is epic"
 }

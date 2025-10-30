@@ -26,7 +26,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.neoforged.neoforge.common.ItemAbilities;
 import net.neoforged.neoforge.common.ItemAbility;
-import net.ronm19.solariummod.util.ModTags;
+import net.ronm19.solarium.util.ModTags;
 
 import javax.annotation.Nullable;
 import java.util.Map;
