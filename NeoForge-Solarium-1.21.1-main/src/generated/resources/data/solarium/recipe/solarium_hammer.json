@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "solarium:solarium_ingot"
+    },
+    "T": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SSS",
+    " T "
+  ],
+  "result": {
+    "count": 1,
+    "id": "solarium:solarium_hammer"
+  }
+}

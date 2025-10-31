@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "solarium:solar_ember_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "solarium:solar_ember"
+  }
+}
