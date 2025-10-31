@@ -41,6 +41,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.SOLARIUM_HAMMER);
         handheldItem(ModItems.SOLAR_DAGGER);
         handheldItem(ModItems.SOLAR_FANG);
+
+        basicItem(ModItems.SOLARIUM_HELMET.get());
+        basicItem(ModItems.SOLARIUM_CHESTPLATE.get());
+        basicItem(ModItems.SOLARIUM_LEGGINGS.get());
+        basicItem(ModItems.SOLARIUM_BOOTS.get());
+
+        basicItem(ModItems.SOLARIUM_HORSE_ARMOR.get());
     }
 
     public void buttonItem( DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {

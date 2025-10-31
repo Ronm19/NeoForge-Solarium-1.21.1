@@ -5,15 +5,19 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import net.ronm19.solarium.SolariumMod;
 import net.ronm19.solarium.block.ModBlocks;
+import net.ronm19.solarium.block.custom.SolarLampBlock;
+
+import java.util.Objects;
 
 public class ModBlockStateProvider extends BlockStateProvider {
-    public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper ) {
+    public ModBlockStateProvider( PackOutput output, ExistingFileHelper exFileHelper ) {
         super(output, SolariumMod.MOD_ID, exFileHelper);
     }
 
@@ -48,15 +52,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.SOLARIUM_FENCE_GATE);
 
         blockItem(ModBlocks.SOLARIUM_TRAPDOOR, "_bottom");
+        customLamp(ModBlocks.SOLAR_LAMP_BLOCK);
 
 
     }
 
-    private void blockWithItem(DeferredBlock<Block> deferredBlock) {
+    private void blockWithItem( DeferredBlock<Block> deferredBlock ) {
         simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
     }
 
-    private void grassLikeBlock(DeferredBlock<Block> deferredBlock, String side, String top, String bottom) {
+    private void grassLikeBlock( DeferredBlock<Block> deferredBlock, String side, String top, String bottom ) {
         Block block = deferredBlock.get();
         String name = BuiltInRegistries.BLOCK.getKey(block).getPath();
 
@@ -74,11 +79,35 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(block, model);
     }
 
-    private void blockItem(DeferredBlock<Block> deferredBlock) {
+    private void blockItem( DeferredBlock<Block> deferredBlock ) {
         simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("solarium:block/" + deferredBlock.getId().getPath()));
     }
 
-    private void blockItem(DeferredBlock<Block> deferredBlock, String appendix) {
+    private void blockItem( DeferredBlock<Block> deferredBlock, String appendix ) {
         simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("solarium:block/" + deferredBlock.getId().getPath() + appendix));
     }
+
+    private void customLamp(DeferredBlock<? extends Block> lampBlock) {
+        // Get the block's registry name (like "solar_lamp")
+        String blockName = Objects.requireNonNull(lampBlock.getId()).getPath();
+
+        // Build blockstate models depending on CLICKED
+        getVariantBuilder(lampBlock.get()).forAllStates(state -> {
+            boolean isOn = state.getValue(SolarLampBlock.CLICKED);
+            String textureName = blockName + (isOn ? "_turned_on" : "_turned_off");
+
+            return new ConfiguredModel[]{
+                    new ConfiguredModel(models().cubeAll(textureName,
+                            ResourceLocation.fromNamespaceAndPath(SolariumMod.MOD_ID, "block/" + textureName)))
+            };
+        });
+
+        // Item model defaults to the "on" texture
+        String itemTexture = blockName + "_turned_on";
+        simpleBlockItem(lampBlock.get(), models().cubeAll(itemTexture,
+                ResourceLocation.fromNamespaceAndPath(SolariumMod.MOD_ID, "block/" + itemTexture)));
+    }
+
+
+
 }

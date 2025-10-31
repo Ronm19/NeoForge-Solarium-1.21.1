@@ -15,6 +15,13 @@
   "item.solarium.solarium_hammer": "Solarium Hammer",
   "item.solarium.solar_dagger": "Solar Dagger",
   "item.solarium.solar_fang": "Solar Fang",
+  "item.solarium.solar_bow": "Solar Bow",
+
+  "item.solarium.solarium_helmet": "Solarium Helmet",
+  "item.solarium.solarium_chestplate": "Solarium Chestplate",
+  "item.solarium.solarium_leggings": "Solarium Leggings",
+  "item.solarium.solarium_boots": "Solarium Boots",
+  "item.solarium.solarium_horse_armor": "Solarium Horse Armor",
 
 
   "block.solarium.solarium_block": "Solarium Block",
@@ -25,6 +32,7 @@
   "block.solarium.solar_grass_block": "Solar Grass Block",
   "block.solarium.solar_dirt_block": "Solar Dirt Block",
   "block.solarium.solar_ash_block": "Solar Ash Block",
+  "block.solarium.solar_lamp_block": "Solar Lamp Block",
   "block.solarium.solar_workbench_block": "Solar Workbench Block",
 
   "block.solarium.solarium_stairs": "Solarium Stairs",
@@ -36,6 +44,7 @@
   "block.solarium.solarium_wall": "Solarium Wall",
   "block.solarium.solarium_trapdoor": "Solarium Trapdoor",
   "block.solarium.solarium_door": "Solarium Door",
+
 
 
 

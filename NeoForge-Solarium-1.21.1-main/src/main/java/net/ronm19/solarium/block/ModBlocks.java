@@ -11,6 +11,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.ronm19.solarium.SolariumMod;
+import net.ronm19.solarium.block.custom.SolarLampBlock;
 import net.ronm19.solarium.item.ModItems;
 
 import java.util.function.Supplier;
@@ -39,6 +40,10 @@ public class ModBlocks {
             () -> new GrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK).sound(SoundType.GRASS)));
     public static final DeferredBlock<Block> SOLAR_DIRT_BLOCK = registerBlock("solar_dirt_block",
             () -> new RootedDirtBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT).sound(SoundType.ROOTED_DIRT)));
+
+    public static final DeferredBlock<Block> SOLAR_LAMP_BLOCK = registerBlock("solar_lamp_block",
+            () -> new SolarLampBlock(BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)
+                    .lightLevel(state -> state.getValue(SolarLampBlock.CLICKED) ? 15 : 0)));
 
     public static final DeferredBlock<Block> SOLAR_WORKBENCH_BLOCK = registerBlock("solar_workbench_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE).sound(SoundType.WOOD)));

@@ -46,6 +46,24 @@ public class ModItems {
             () -> new SolarDaggerItem(ModToolTiers.SOLARIUM, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.SOLARIUM, 4, -2.1f)).fireResistant(), MobEffects.HARM));
     public static final DeferredItem<Item> SOLAR_FANG = ITEMS.register("solar_fang",
             () -> new SolarFangItem(ModToolTiers.SOLARIUM, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.SOLARIUM, 6, -2.1f)).fireResistant()));
+    public static final DeferredItem<Item> SOLAR_BOW = ITEMS.register("solar_bow",
+            () -> new BowItem(new Item.Properties().durability(2500).fireResistant()));
+
+    public static final DeferredItem<Item> SOLARIUM_HELMET = ITEMS.register("solarium_helmet",
+            () -> new ModArmorItem(ModArmorMaterials.SOLARIUM, ArmorItem.Type.HELMET,
+                    new Item.Properties().fireResistant().durability(ArmorItem.Type.HELMET.getDurability(47))));
+    public static final DeferredItem<Item> SOLARIUM_CHESTPLATE = ITEMS.register("solarium_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.SOLARIUM, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().fireResistant().durability(ArmorItem.Type.CHESTPLATE.getDurability(47))));
+    public static final DeferredItem<Item> SOLARIUM_LEGGINGS = ITEMS.register("solarium_leggings",
+            () -> new ArmorItem(ModArmorMaterials.SOLARIUM, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().fireResistant().durability(ArmorItem.Type.LEGGINGS.getDurability(47))));
+    public static final DeferredItem<Item> SOLARIUM_BOOTS = ITEMS.register("solarium_boots",
+            () -> new ArmorItem(ModArmorMaterials.SOLARIUM, ArmorItem.Type.BOOTS,
+                    new Item.Properties().fireResistant().durability(ArmorItem.Type.BOOTS.getDurability(47))));
+
+    public static final DeferredItem<Item> SOLARIUM_HORSE_ARMOR = ITEMS.register("solarium_horse_armor",
+            () -> new AnimalArmorItem(ModArmorMaterials.SOLARIUM, AnimalArmorItem.BodyType.EQUESTRIAN, false, new Item.Properties().fireResistant().stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

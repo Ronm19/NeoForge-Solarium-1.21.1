@@ -37,6 +37,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.SOLAR_GRASS_BLOCK.get());
         dropSelf(ModBlocks.SOLAR_DIRT_BLOCK.get());
         dropSelf(ModBlocks.SOLAR_WORKBENCH_BLOCK.get());
+        dropSelf(ModBlocks.SOLAR_LAMP_BLOCK.get());
 
         dropSelf(ModBlocks.SOLARIUM_STAIRS.get());
         this.add(ModBlocks.SOLARIUM_SLAB.get(), block -> createSlabItemTable(ModBlocks.SOLARIUM_SLAB.get()));

@@ -1,4 +1,4 @@
-// 1.21	2025-10-31T07:50:33.4814761	Loot Tables
+// 1.21	2025-10-31T12:30:31.4799583	Loot Tables
 a50a7ae3c55e73c0defe6276bf263c84027c7841 data/solarium/loot_table/blocks/deepslate_solarium_ore.json
 6232556ebe0145ab3f56e45f9ee3e30740ce73b5 data/solarium/loot_table/blocks/raw_solarium_block.json
 8e2d410fb215ecb5c71d1887e3948233c246c585 data/solarium/loot_table/blocks/solarium_block.json
@@ -16,4 +16,5 @@ ffb849fcdf19b6a48efc36129a23b7267e1e6f3a data/solarium/loot_table/blocks/solariu
 0dc594b831ea3ba4d78e786232e806a5b54bf5b2 data/solarium/loot_table/blocks/solar_dirt_block.json
 09732e208838940e6b3702a151287850054940e7 data/solarium/loot_table/blocks/solar_ember_block.json
 a577eb496989f4b8ae27b1e78954f6b4d49fdf6a data/solarium/loot_table/blocks/solar_grass_block.json
+3c0f2b052f12a7c8c4fed0c7592d6ddd4fbecc59 data/solarium/loot_table/blocks/solar_lamp_block.json
 e54cb32226ec58803b8f366c87dedb97a44f9454 data/solarium/loot_table/blocks/solar_workbench_block.json

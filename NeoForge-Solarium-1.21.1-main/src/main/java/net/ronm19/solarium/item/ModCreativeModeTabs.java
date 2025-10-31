@@ -42,6 +42,14 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SOLARIUM_HAMMER);
                         output.accept(ModItems.SOLAR_DAGGER);
                         output.accept(ModItems.SOLAR_FANG);
+                        output.accept(ModItems.SOLAR_BOW);
+
+                        output.accept(ModItems.SOLARIUM_HELMET);
+                        output.accept(ModItems.SOLARIUM_CHESTPLATE);
+                        output.accept(ModItems.SOLARIUM_LEGGINGS);
+                        output.accept(ModItems.SOLARIUM_BOOTS);
+
+                        output.accept(ModItems.SOLARIUM_HORSE_ARMOR);
 
                     }).build());
 
@@ -76,6 +84,8 @@ public class ModCreativeModeTabs {
                        output.accept(ModBlocks.SOLARIUM_WALL);
                        output.accept(ModBlocks.SOLARIUM_TRAPDOOR);
                        output.accept(ModBlocks.SOLARIUM_DOOR);
+
+                       output.accept(ModBlocks.SOLAR_LAMP_BLOCK);
 
                     }).build());
 
