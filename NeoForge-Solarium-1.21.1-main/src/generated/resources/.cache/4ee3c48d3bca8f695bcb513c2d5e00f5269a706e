@@ -1,7 +1,11 @@
-// 1.21	2025-10-30T18:44:24.5501584	Item Models: solarium
+// 1.21	2025-10-31T07:50:33.4814761	Item Models: solarium
 a91d12fb089e9e8d57937be2cef26c207a4f3a0a assets/solarium/models/item/raw_solarium_ingot.json
+53ecfe7bdf6e231aa4b816460dd54a85d40bf288 assets/solarium/models/item/solarium_button.json
 b26006a18d7627dff0fbed9cdc427c08a83051a0 assets/solarium/models/item/solarium_chainsaw.json
+675e40c09a48984a8afe7660de9eca3189abd827 assets/solarium/models/item/solarium_door.json
+4e2ddfbaf4c487998afbbe7ee1d970fe87ca0edc assets/solarium/models/item/solarium_fence.json
 a5e967b02df549af735514f71fea3fb44cb359c4 assets/solarium/models/item/solarium_ingot.json
+e0782aa4c694097a8c32fbe2a3a8a37d59f51b0a assets/solarium/models/item/solarium_wall.json
 ed4f72556d27c760b0dfa6661870d2437313567d assets/solarium/models/item/solar_apple.json
 8c40f66f432237192c471b43b2e723440892fbfe assets/solarium/models/item/solar_ember.json
 39ab52ccefdd226cd0c3c84df238e52bb12d4ec1 assets/solarium/models/item/solar_tomato.json

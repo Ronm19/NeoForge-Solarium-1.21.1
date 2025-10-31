@@ -1,9 +1,13 @@
 package net.ronm19.solarium.datagen;
 
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
 import net.ronm19.solarium.SolariumMod;
+import net.ronm19.solarium.block.ModBlocks;
 import net.ronm19.solarium.item.ModItems;
 
 public class ModItemModelProvider extends ItemModelProvider {
@@ -19,5 +23,29 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.SOLAR_APPLE.get());
         basicItem(ModItems.SOLAR_TOMATO.get());
         basicItem(ModItems.SOLAR_EMBER.get());
+
+        buttonItem(ModBlocks.SOLARIUM_BUTTON, ModBlocks.SOLARIUM_BLOCK);
+        fenceItem(ModBlocks.SOLARIUM_FENCE, ModBlocks.SOLARIUM_BLOCK);
+        wallItem(ModBlocks.SOLARIUM_WALL, ModBlocks.SOLARIUM_BLOCK);
+        basicItem(ModBlocks.SOLARIUM_DOOR.asItem());
     }
+
+    public void buttonItem( DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/button_inventory"))
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(SolariumMod.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
+    }
+
+    public void fenceItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(SolariumMod.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
+    }
+
+    public void wallItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/wall_inventory"))
+                .texture("wall",  ResourceLocation.fromNamespaceAndPath(SolariumMod.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
+    }
+
 }

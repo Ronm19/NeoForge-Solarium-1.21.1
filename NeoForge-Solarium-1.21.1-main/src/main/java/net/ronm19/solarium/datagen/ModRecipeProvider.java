@@ -3,8 +3,10 @@ package net.ronm19.solarium.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.conditions.ICondition;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import net.ronm19.solarium.SolariumMod;
@@ -31,6 +33,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', ModItems.SOLARIUM_INGOT.get())
                 .unlockedBy("has_solarium_ingot", has(ModItems.SOLARIUM_INGOT.get())).save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOLAR_ASH_BLOCK.get())
+                .pattern("GGG")
+                .pattern("GPG")
+                .pattern("GGG")
+                .define('G', Blocks.GRAVEL)
+                .define('P', Items.GUNPOWDER)
+                .unlockedBy("has_gunpowder", has(Items.GUNPOWDER)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOLAR_WORKBENCH_BLOCK.get())
+                .pattern("SSS")
+                .pattern("SCS")
+                .pattern("SSS")
+                .define('C', Blocks.CRAFTING_TABLE)
+                .define('S', ModItems.SOLARIUM_INGOT)
+                .unlockedBy("has_crafting_table", has(Blocks.CRAFTING_TABLE)).save(recipeOutput);
+
 
         // -------------- Shapeless Recipes ---------------------- //
 
@@ -38,6 +56,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.SOLARIUM_BLOCK.get())
                 .unlockedBy("has_solarium_block", has(ModBlocks.SOLARIUM_BLOCK.get())).save(recipeOutput);
 
+        stairBuilder(ModBlocks.SOLARIUM_STAIRS.get(), Ingredient.of(ModBlocks.SOLARIUM_BLOCK.get())).group("solarium")
+                .unlockedBy("has_solarium_block", has(ModBlocks.SOLARIUM_BLOCK.get())).save(recipeOutput);
+
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOLARIUM_SLAB.get(), ModBlocks.SOLARIUM_BLOCK.get());
+        pressurePlate(recipeOutput, ModBlocks.SOLARIUM_PRESSURE_PLATE.get(), ModBlocks.SOLARIUM_BLOCK.get());
+
+        buttonBuilder(ModBlocks.SOLARIUM_BUTTON.get(), Ingredient.of(ModBlocks.SOLARIUM_BLOCK.get())).group("solarium")
+                .unlockedBy("has_solarium_block", has(ModBlocks.SOLARIUM_BLOCK.get())).save(recipeOutput);
+
+        fenceBuilder(ModBlocks.SOLARIUM_FENCE.get(), Ingredient.of(ModBlocks.SOLARIUM_BLOCK.get())).group("solarium")
+                .unlockedBy("has_solarium_block", has(ModBlocks.SOLARIUM_BLOCK.get())).save(recipeOutput);
+        fenceGateBuilder(ModBlocks.SOLARIUM_FENCE_GATE.get(), Ingredient.of(ModBlocks.SOLARIUM_BLOCK.get())).group("solarium")
+                .unlockedBy("has_solarium_block", has(ModBlocks.SOLARIUM_BLOCK.get())).save(recipeOutput);
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOLARIUM_WALL.get(), ModBlocks.SOLARIUM_BLOCK.get());
+
+        doorBuilder(ModBlocks.SOLARIUM_DOOR.get(), Ingredient.of(ModBlocks.SOLARIUM_BLOCK.get())).group("solarium")
+                .unlockedBy("has_solarium_block", has(ModBlocks.SOLARIUM_BLOCK.get())).save(recipeOutput);
+        trapdoorBuilder(ModBlocks.SOLARIUM_TRAPDOOR.get(), Ingredient.of(ModBlocks.SOLARIUM_BLOCK.get())).group("solarium")
+                .unlockedBy("has_solarium_block", has(ModBlocks.SOLARIUM_BLOCK.get())).save(recipeOutput);
 
 
         // ------------- Cooking Recipes ---------- //

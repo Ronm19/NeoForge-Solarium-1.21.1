@@ -51,6 +51,22 @@ public class ModCreativeModeTabs {
 
                        output.accept(ModBlocks.SOLAR_EMBER_BLOCK);
 
+                       output.accept(ModBlocks.SOLAR_ASH_BLOCK);
+                       output.accept(ModBlocks.SOLAR_GRASS_BLOCK);
+                       output.accept(ModBlocks.SOLAR_DIRT_BLOCK);
+
+                       output.accept(ModBlocks.SOLAR_WORKBENCH_BLOCK);
+
+                       output.accept(ModBlocks.SOLARIUM_STAIRS);
+                       output.accept(ModBlocks.SOLARIUM_SLAB);
+                       output.accept(ModBlocks.SOLARIUM_BUTTON);
+                       output.accept(ModBlocks.SOLARIUM_PRESSURE_PLATE);
+                       output.accept(ModBlocks.SOLARIUM_FENCE);
+                       output.accept(ModBlocks.SOLARIUM_FENCE_GATE);
+                       output.accept(ModBlocks.SOLARIUM_WALL);
+                       output.accept(ModBlocks.SOLARIUM_TRAPDOOR);
+                       output.accept(ModBlocks.SOLARIUM_DOOR);
+
                     }).build());
 
     public static void register(IEventBus eventBus) {

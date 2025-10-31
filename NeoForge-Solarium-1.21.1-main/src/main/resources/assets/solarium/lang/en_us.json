@@ -4,16 +4,35 @@
   "item.solarium.solar_apple": "Solar Apple",
   "item.solarium.solar_tomato": "Solar Tomato",
   "item.solarium.solar_ember": "Solar Ember",
+  "item.solarium.solarium_chainsaw": "Solarium Chainsaw",
 
   "block.solarium.solarium_block": "Solarium Block",
   "block.solarium.raw_solarium_block": "Raw Solarium Block",
   "block.solarium.solarium_ore": "Solarium Ore",
   "block.solarium.deepslate_solarium_ore": "Deepslate Solarium Ore",
   "block.solarium.solar_ember_block": "Solar Ember Block",
+  "block.solarium.solar_grass_block": "Solar Grass Block",
+  "block.solarium.solar_dirt_block": "Solar Dirt Block",
+  "block.solarium.solar_ash_block": "Solar Ash Block",
+  "block.solarium.solar_workbench_block": "Solar Workbench Block",
+
+  "block.solarium.solarium_stairs": "Solarium Stairs",
+  "block.solarium.solarium_slab": "Solarium Slab",
+  "block.solarium.solarium_pressure_plate": "Solarium Pressure Plate",
+  "block.solarium.solarium_button": "Solarium Button",
+  "block.solarium.solarium_fence": "Solarium Fence",
+  "block.solarium.solarium_fence_gate": "Solarium Fence Gate",
+  "block.solarium.solarium_wall": "Solarium Wall",
+  "block.solarium.solarium_trapdoor": "Solarium Trapdoor",
+  "block.solarium.solarium_door": "Solarium Door",
+
+
 
   "itemGroup.solarium.solarium_mod_items_tab": "Solarium Mod Items",
   "itemGroup.solarium.solarium_mod_blocks_tab": "Solarium Mod Blocks",
-  "tooltip.solariummod.solarium_hammer.tooltip_1": "This Tool can cause distraction",
-  "tooltip.solariummod.solarium_hammer.tooltip_2": "Can be useful if you need to dig a lot.",
-  "tooltip.solariummod.solarium_hammer.tooltip_shift": "This thing is epic"
+
+
+  "tooltip.solarium.solarium_hammer.tooltip_1": "This Tool can cause distraction",
+  "tooltip.solarium.solarium_hammer.tooltip_2": "Can be useful if you need to dig a lot.",
+  "tooltip.solarium.solarium_hammer.tooltip_shift": "This thing is epic"
 }

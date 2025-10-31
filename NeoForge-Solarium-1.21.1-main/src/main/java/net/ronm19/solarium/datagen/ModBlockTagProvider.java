@@ -24,13 +24,30 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.RAW_SOLARIUM_BLOCK.get())
                 .add(ModBlocks.SOLARIUM_ORE.get())
                 .add(ModBlocks.DEEPSLATE_SOLARIUM_ORE.get())
+                .add(ModBlocks.SOLARIUM_WALL.get())
                 .add(ModBlocks.SOLAR_EMBER_BLOCK.get());
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.SOLARIUM_BLOCK.get())
                 .add(ModBlocks.RAW_SOLARIUM_BLOCK.get())
                 .add(ModBlocks.SOLARIUM_ORE.get())
+                .add(ModBlocks.SOLARIUM_WALL.get())
                 .add(ModBlocks.DEEPSLATE_SOLARIUM_ORE.get())
                 .add(ModBlocks.SOLAR_EMBER_BLOCK.get());
+
+        this.tag(BlockTags.DIRT)
+                .add(ModBlocks.SOLAR_GRASS_BLOCK.get())
+                .add(ModBlocks.SOLAR_DIRT_BLOCK.get());
+
+        this.tag(BlockTags.WOODEN_FENCES)
+                .add(ModBlocks.SOLARIUM_FENCE.get());
+
+        this.tag(BlockTags.FENCES);
+
+        this.tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.SOLARIUM_FENCE_GATE.get());
+
+        this.tag(BlockTags.WALLS)
+                .add(ModBlocks.SOLARIUM_WALL.get());
     }
 }
