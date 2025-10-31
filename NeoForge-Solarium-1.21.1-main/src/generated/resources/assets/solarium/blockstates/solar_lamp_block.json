@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "solarium:block/solar_lamp_block_turned_off"
+    },
+    "clicked=true": {
+      "model": "solarium:block/solar_lamp_block_turned_on"
+    }
+  }
+}
