@@ -33,6 +33,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SOLAR_APPLE);
                         output.accept(ModItems.SOLAR_TOMATO);
 
+                        output.accept(ModItems.SOLAR_TOMATO_SEEDS);
+
                         output.accept(ModItems.SOLARIUM_SWORD);
                         output.accept(ModItems.SOLARIUM_PICKAXE);
                         output.accept(ModItems.SOLARIUM_AXE);
@@ -42,7 +44,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SOLARIUM_HAMMER);
                         output.accept(ModItems.SOLAR_DAGGER);
                         output.accept(ModItems.SOLAR_FANG);
-                        output.accept(ModItems.SOLAR_BOW);
+                        output.accept(ModItems.SOLAR_EDGE);
 
                         output.accept(ModItems.SOLARIUM_HELMET);
                         output.accept(ModItems.SOLARIUM_CHESTPLATE);
@@ -72,6 +74,7 @@ public class ModCreativeModeTabs {
                        output.accept(ModBlocks.SOLAR_ASH_BLOCK);
                        output.accept(ModBlocks.SOLAR_GRASS_BLOCK);
                        output.accept(ModBlocks.SOLAR_DIRT_BLOCK);
+                       output.accept(ModBlocks.SOLAR_ROSE);
 
                        output.accept(ModBlocks.SOLAR_WORKBENCH_BLOCK);
 

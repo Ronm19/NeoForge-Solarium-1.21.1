@@ -1,0 +1,10 @@
+{
+  "values": {
+    "solarium:solar_tomato": {
+      "chance": 0.45
+    },
+    "solarium:solar_tomato_seeds": {
+      "chance": 0.2
+    }
+  }
+}

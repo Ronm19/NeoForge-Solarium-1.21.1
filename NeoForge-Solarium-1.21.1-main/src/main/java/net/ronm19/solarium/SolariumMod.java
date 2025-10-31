@@ -1,10 +1,12 @@
 package net.ronm19.solarium;
 
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.ronm19.solarium.block.ModBlocks;
 import net.ronm19.solarium.item.ModArmorMaterials;
 import net.ronm19.solarium.item.ModCreativeModeTabs;
 import net.ronm19.solarium.item.ModItems;
+import net.ronm19.solarium.sound.ModSounds;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -48,6 +50,8 @@ public class SolariumMod {
 
         ModArmorMaterials.register(modEventBus);
 
+        ModSounds.register(modEventBus);
+
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
@@ -61,16 +65,9 @@ public class SolariumMod {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-        // Some common setup code
-        LOGGER.info("HELLO FROM COMMON SETUP");
-
-        if (Config.LOG_DIRT_BLOCK.getAsBoolean()) {
-            LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
-        }
-
-        LOGGER.info("{}{}", Config.MAGIC_NUMBER_INTRODUCTION.get(), Config.MAGIC_NUMBER.getAsInt());
-
-        Config.ITEM_STRINGS.get().forEach((item) -> LOGGER.info("ITEM >> {}", item));
+      event.enqueueWork(() -> {
+          ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.SOLAR_ROSE.getId(), ModBlocks.POTTED_SOLAR_ROSE);
+      });
     }
 
     // Add the example block item to the building blocks tab

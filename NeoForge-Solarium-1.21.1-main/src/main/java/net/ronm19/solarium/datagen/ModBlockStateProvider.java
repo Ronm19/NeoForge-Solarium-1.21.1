@@ -4,6 +4,8 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
@@ -13,8 +15,10 @@ import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import net.ronm19.solarium.SolariumMod;
 import net.ronm19.solarium.block.ModBlocks;
 import net.ronm19.solarium.block.custom.SolarLampBlock;
+import net.ronm19.solarium.block.custom.SolarTomatoCropBlock;
 
 import java.util.Objects;
+import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider( PackOutput output, ExistingFileHelper exFileHelper ) {
@@ -45,6 +49,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.SOLARIUM_TRAPDOOR.get()), modLoc("block/solarium_trapdoor"), true, "cutout");
 
         grassLikeBlock(ModBlocks.SOLAR_GRASS_BLOCK, "solar_grass_block_side", "solar_grass_block_top", "solar_grass_block_bottom");
+
+        makeCrop((SolarTomatoCropBlock) ModBlocks.SOLAR_TOMATO_CROP.get(), ((SolarTomatoCropBlock) ModBlocks.SOLAR_TOMATO_CROP.get()).getAgeProperty(), "solar_tomato_stage_", "solar_tomato_crop_stage");
+
+        simpleBlock(ModBlocks.SOLAR_ROSE.get(),
+                models().cross(blockTexture(ModBlocks.SOLAR_ROSE.get()).getPath(), blockTexture(ModBlocks.SOLAR_ROSE.get())).renderType("cutout"));
+        simpleBlock(ModBlocks.POTTED_SOLAR_ROSE.get(), models().singleTexture("potted_solar_rose", ResourceLocation.parse("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.SOLAR_ROSE.get())).renderType("cutout"));
 
         blockItem(ModBlocks.SOLARIUM_STAIRS);
         blockItem(ModBlocks.SOLARIUM_SLAB);
@@ -107,6 +118,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(lampBlock.get(), models().cubeAll(itemTexture,
                 ResourceLocation.fromNamespaceAndPath(SolariumMod.MOD_ID, "block/" + itemTexture)));
     }
+
+    public void makeCrop(CropBlock block, IntegerProperty ageProperty, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> {
+            int age = state.getValue(ageProperty);
+            return new ConfiguredModel[]{
+                    new ConfiguredModel(models().crop(modelName + age,
+                                    ResourceLocation.fromNamespaceAndPath(SolariumMod.MOD_ID, "block/" + textureName + age))
+                            .renderType("cutout"))
+            };
+        };
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+
+
 
 
 

@@ -6,6 +6,8 @@
   "item.solarium.solar_ember": "Solar Ember",
   "item.solarium.solarium_chainsaw": "Solarium Chainsaw",
 
+  "item.solarium.solar_tomato_seeds": "Solar Tomato Seeds",
+
   "item.solarium.solarium_sword": "Solarium Sword",
   "item.solarium.solarium_pickaxe": "Solarium Pickaxe",
   "item.solarium.solarium_axe": "Solarium Axe",
@@ -15,7 +17,7 @@
   "item.solarium.solarium_hammer": "Solarium Hammer",
   "item.solarium.solar_dagger": "Solar Dagger",
   "item.solarium.solar_fang": "Solar Fang",
-  "item.solarium.solar_bow": "Solar Bow",
+  "item.solarium.solar_edge": "Solar Edge",
 
   "item.solarium.solarium_helmet": "Solarium Helmet",
   "item.solarium.solarium_chestplate": "Solarium Chestplate",
@@ -34,6 +36,10 @@
   "block.solarium.solar_ash_block": "Solar Ash Block",
   "block.solarium.solar_lamp_block": "Solar Lamp Block",
   "block.solarium.solar_workbench_block": "Solar Workbench Block",
+
+  "block.solarium.solar_tomato_crop": "Solar Tomato Crop",
+  "block.solarium.potted_solar_rose": "Potted Solar Rose",
+  "block.solarium.solar_rose": "Solar Rose",
 
   "block.solarium.solarium_stairs": "Solarium Stairs",
   "block.solarium.solarium_slab": "Solarium Slab",

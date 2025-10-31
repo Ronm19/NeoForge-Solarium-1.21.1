@@ -6,6 +6,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.ronm19.solarium.SolariumMod;
+import net.ronm19.solarium.block.ModBlocks;
 import net.ronm19.solarium.item.custom.*;
 
 public class ModItems {
@@ -27,6 +28,9 @@ public class ModItems {
     public static final DeferredItem<Item> SOLAR_TOMATO = ITEMS.registerItem("solar_tomato",
             Item::new, new Item.Properties().food(ModFoodProperties.SOLAR_TOMATO).fireResistant());
 
+    public static final DeferredItem<Item> SOLAR_TOMATO_SEEDS = ITEMS.register("solar_tomato_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.SOLAR_TOMATO_CROP.get(), new Item.Properties().fireResistant()));
+
     public static final DeferredItem<Item> SOLARIUM_SWORD = ITEMS.register("solarium_sword",
             () -> new SwordItem(ModToolTiers.SOLARIUM, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.SOLARIUM, 8, -2.4f)).fireResistant()));
     public static final DeferredItem<Item> SOLARIUM_PICKAXE = ITEMS.register("solarium_pickaxe",
@@ -46,8 +50,9 @@ public class ModItems {
             () -> new SolarDaggerItem(ModToolTiers.SOLARIUM, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.SOLARIUM, 4, -2.1f)).fireResistant(), MobEffects.HARM));
     public static final DeferredItem<Item> SOLAR_FANG = ITEMS.register("solar_fang",
             () -> new SolarFangItem(ModToolTiers.SOLARIUM, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.SOLARIUM, 6, -2.1f)).fireResistant()));
-    public static final DeferredItem<Item> SOLAR_BOW = ITEMS.register("solar_bow",
-            () -> new BowItem(new Item.Properties().durability(2500).fireResistant()));
+
+    public static final DeferredItem<Item> SOLAR_EDGE = ITEMS.registerItem("solar_edge", properties -> new SolarEdgeItem(ModToolTiers.SOLARIUM,
+            new Item.Properties().attributes(SolarEdgeItem.createAttributes(ModToolTiers.SOLARIUM, 23, -2.4f)).fireResistant()));
 
     public static final DeferredItem<Item> SOLARIUM_HELMET = ITEMS.register("solarium_helmet",
             () -> new ModArmorItem(ModArmorMaterials.SOLARIUM, ArmorItem.Type.HELMET,

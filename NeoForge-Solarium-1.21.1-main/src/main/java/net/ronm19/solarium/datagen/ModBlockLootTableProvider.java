@@ -1,5 +1,6 @@
 package net.ronm19.solarium.datagen;
 
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -16,8 +17,11 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.ronm19.solarium.block.ModBlocks;
+import net.ronm19.solarium.block.custom.SolarTomatoCropBlock;
 import net.ronm19.solarium.item.ModItems;
 import org.jetbrains.annotations.NotNull;
 
@@ -38,6 +42,13 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.SOLAR_DIRT_BLOCK.get());
         dropSelf(ModBlocks.SOLAR_WORKBENCH_BLOCK.get());
         dropSelf(ModBlocks.SOLAR_LAMP_BLOCK.get());
+
+        LootItemCondition.Builder lootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.SOLAR_TOMATO_CROP.get())
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SolarTomatoCropBlock.AGE, 5));
+        this.add(ModBlocks.SOLAR_TOMATO_CROP.get(), this.createCropDrops(ModBlocks.SOLAR_TOMATO_CROP.get(), ModItems.SOLAR_TOMATO.get(), ModItems.SOLAR_TOMATO_SEEDS.asItem(), lootItemConditionBuilder));
+
+        this.dropSelf(ModBlocks.SOLAR_ROSE.get());
+        this.add(ModBlocks.POTTED_SOLAR_ROSE.get(), createPotFlowerItemTable(ModBlocks.SOLAR_ROSE));
 
         dropSelf(ModBlocks.SOLARIUM_STAIRS.get());
         this.add(ModBlocks.SOLARIUM_SLAB.get(), block -> createSlabItemTable(ModBlocks.SOLARIUM_SLAB.get()));

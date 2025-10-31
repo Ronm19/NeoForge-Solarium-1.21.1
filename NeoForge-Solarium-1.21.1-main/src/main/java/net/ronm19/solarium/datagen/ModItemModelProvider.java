@@ -27,6 +27,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.SOLAR_TOMATO.get());
         basicItem(ModItems.SOLAR_EMBER.get());
 
+        basicItem(ModItems.SOLAR_TOMATO_SEEDS.get());
+        flowerItem(ModBlocks.SOLAR_ROSE);
+
         buttonItem(ModBlocks.SOLARIUM_BUTTON, ModBlocks.SOLARIUM_BLOCK);
         fenceItem(ModBlocks.SOLARIUM_FENCE, ModBlocks.SOLARIUM_BLOCK);
         wallItem(ModBlocks.SOLARIUM_WALL, ModBlocks.SOLARIUM_BLOCK);
@@ -48,6 +51,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.SOLARIUM_BOOTS.get());
 
         basicItem(ModItems.SOLARIUM_HORSE_ARMOR.get());
+    }
+
+    public void flowerItem(DeferredBlock<Block> block) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("item/generated"))
+                .texture("layer0",  ResourceLocation.fromNamespaceAndPath(SolariumMod.MOD_ID,
+                        "block/" + block.getId().getPath()));
     }
 
     public void buttonItem( DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {

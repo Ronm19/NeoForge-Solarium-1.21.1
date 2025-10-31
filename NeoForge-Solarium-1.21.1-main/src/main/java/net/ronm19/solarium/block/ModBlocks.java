@@ -1,6 +1,7 @@
 package net.ronm19.solarium.block;
 
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -12,6 +13,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.ronm19.solarium.SolariumMod;
 import net.ronm19.solarium.block.custom.SolarLampBlock;
+import net.ronm19.solarium.block.custom.SolarTomatoCropBlock;
 import net.ronm19.solarium.item.ModItems;
 
 import java.util.function.Supplier;
@@ -44,6 +46,14 @@ public class ModBlocks {
     public static final DeferredBlock<Block> SOLAR_LAMP_BLOCK = registerBlock("solar_lamp_block",
             () -> new SolarLampBlock(BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)
                     .lightLevel(state -> state.getValue(SolarLampBlock.CLICKED) ? 15 : 0)));
+
+    public static final DeferredBlock<Block> SOLAR_TOMATO_CROP = BLOCKS.register("solar_tomato_crop",
+            () -> new SolarTomatoCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
+
+    public static final DeferredBlock<Block> SOLAR_ROSE = registerBlock("solar_rose",
+            () -> new FlowerBlock(MobEffects.FIRE_RESISTANCE, 15, BlockBehaviour.Properties.ofFullCopy(Blocks.WITHER_ROSE)));
+    public static final DeferredBlock<Block> POTTED_SOLAR_ROSE = BLOCKS.register("potted_solar_rose",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), SOLAR_ROSE, BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_WITHER_ROSE)));
 
     public static final DeferredBlock<Block> SOLAR_WORKBENCH_BLOCK = registerBlock("solar_workbench_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE).sound(SoundType.WOOD)));
