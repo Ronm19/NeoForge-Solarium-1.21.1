@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "solarium:block/solarium_slab"
+    },
+    "type=double": {
+      "model": "solarium:block/solarium_block"
+    },
+    "type=top": {
+      "model": "solarium:block/solarium_slab_top"
+    }
+  }
+}

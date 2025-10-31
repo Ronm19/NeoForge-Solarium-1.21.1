@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "solarium",
+  "ingredients": [
+    {
+      "item": "solarium:solarium_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "solarium:solarium_button"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "solarium:block/solarium_block",
+    "side": "solarium:block/solarium_block",
+    "top": "solarium:block/solarium_block"
+  }
+}
