@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "solarium:solar_poi",
+      "required": false
+    }
+  ]
+}

@@ -3,10 +3,13 @@ package net.ronm19.solarium;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.ronm19.solarium.block.ModBlocks;
+import net.ronm19.solarium.effect.ModEffects;
 import net.ronm19.solarium.item.ModArmorMaterials;
 import net.ronm19.solarium.item.ModCreativeModeTabs;
 import net.ronm19.solarium.item.ModItems;
+import net.ronm19.solarium.potion.ModPotions;
 import net.ronm19.solarium.sound.ModSounds;
+import net.ronm19.solarium.villager.ModVillagers;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -51,6 +54,10 @@ public class SolariumMod {
         ModArmorMaterials.register(modEventBus);
 
         ModSounds.register(modEventBus);
+        ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
+
+        ModVillagers.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.

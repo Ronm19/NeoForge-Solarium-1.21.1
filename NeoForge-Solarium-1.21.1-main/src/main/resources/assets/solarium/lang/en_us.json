@@ -25,6 +25,10 @@
   "item.solarium.solarium_boots": "Solarium Boots",
   "item.solarium.solarium_horse_armor": "Solarium Horse Armor",
 
+  "item.minecraft.potion.effect.solar_blessing_potion": "Solar Blessing Potion",
+  "item.minecraft.splash_potion.effect.solar_blessing_potion": "Solar Blessing Splash Potion",
+  "item.minecraft.lingering_potion.effect.solar_blessing_potion": "Solar Blessing Lingering Potion",
+  "item.minecraft.tipped_arrow.effect.solar_blessing_potion": "Arrow of Solar Blessing",
 
   "block.solarium.solarium_block": "Solarium Block",
   "block.solarium.raw_solarium_block": "Raw Solarium Block",
@@ -51,8 +55,9 @@
   "block.solarium.solarium_trapdoor": "Solarium Trapdoor",
   "block.solarium.solarium_door": "Solarium Door",
 
+  "effect.solarium.solar_blessing": "Solar Blessing",
 
-
+  "entity.minecraft.villager.solarium.solarger": "Solarger",
 
   "itemGroup.solarium.solarium_mod_items_tab": "Solarium Mod Items",
   "itemGroup.solarium.solarium_mod_blocks_tab": "Solarium Mod Blocks",
