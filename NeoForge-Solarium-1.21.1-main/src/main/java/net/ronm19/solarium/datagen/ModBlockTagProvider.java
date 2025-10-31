@@ -7,6 +7,7 @@ import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.ronm19.solarium.SolariumMod;
 import net.ronm19.solarium.block.ModBlocks;
+import net.ronm19.solarium.util.ModTags;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -35,6 +36,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.DEEPSLATE_SOLARIUM_ORE.get())
                 .add(ModBlocks.SOLAR_EMBER_BLOCK.get());
 
+        this.tag(ModTags.Blocks.SOLARIUM_PAXEL_MINEABLE)
+                .addTag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .addTag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .addTag(BlockTags.MINEABLE_WITH_AXE);
+
         this.tag(BlockTags.DIRT)
                 .add(ModBlocks.SOLAR_GRASS_BLOCK.get())
                 .add(ModBlocks.SOLAR_DIRT_BLOCK.get());
@@ -49,5 +55,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         this.tag(BlockTags.WALLS)
                 .add(ModBlocks.SOLARIUM_WALL.get());
+
     }
 }

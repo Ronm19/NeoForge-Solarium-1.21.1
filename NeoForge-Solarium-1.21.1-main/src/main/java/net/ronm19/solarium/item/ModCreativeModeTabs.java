@@ -33,6 +33,16 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SOLAR_APPLE);
                         output.accept(ModItems.SOLAR_TOMATO);
 
+                        output.accept(ModItems.SOLARIUM_SWORD);
+                        output.accept(ModItems.SOLARIUM_PICKAXE);
+                        output.accept(ModItems.SOLARIUM_AXE);
+                        output.accept(ModItems.SOLARIUM_SHOVEL);
+                        output.accept(ModItems.SOLARIUM_HOE);
+                        output.accept(ModItems.SOLARIUM_PAXEL);
+                        output.accept(ModItems.SOLARIUM_HAMMER);
+                        output.accept(ModItems.SOLAR_DAGGER);
+                        output.accept(ModItems.SOLAR_FANG);
+
                     }).build());
 
 

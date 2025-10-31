@@ -2,10 +2,13 @@ package net.ronm19.solarium.datagen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredItem;
 import net.ronm19.solarium.SolariumMod;
 import net.ronm19.solarium.block.ModBlocks;
 import net.ronm19.solarium.item.ModItems;
@@ -28,6 +31,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         fenceItem(ModBlocks.SOLARIUM_FENCE, ModBlocks.SOLARIUM_BLOCK);
         wallItem(ModBlocks.SOLARIUM_WALL, ModBlocks.SOLARIUM_BLOCK);
         basicItem(ModBlocks.SOLARIUM_DOOR.asItem());
+
+        handheldItem(ModItems.SOLARIUM_SWORD);
+        handheldItem(ModItems.SOLARIUM_PICKAXE);
+        handheldItem(ModItems.SOLARIUM_AXE);
+        handheldItem(ModItems.SOLARIUM_SHOVEL);
+        handheldItem(ModItems.SOLARIUM_HOE);
+        handheldItem(ModItems.SOLARIUM_PAXEL);
+        handheldItem(ModItems.SOLARIUM_HAMMER);
+        handheldItem(ModItems.SOLAR_DAGGER);
+        handheldItem(ModItems.SOLAR_FANG);
     }
 
     public void buttonItem( DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
@@ -48,4 +61,9 @@ public class ModItemModelProvider extends ItemModelProvider {
                         "block/" + baseBlock.getId().getPath()));
     }
 
+    private ItemModelBuilder handheldItem( DeferredItem<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/handheld")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(SolariumMod.MOD_ID,"item/" + item.getId().getPath()));
+    }
 }

@@ -10,6 +10,8 @@ import net.ronm19.solarium.SolariumMod;
 
 public class ModTags {
     public static class Blocks {
+        public static final TagKey<Block> INCORRECT_FOR_SOLARIUM_TOOL = createTag("incorrect_for_solarium_tool");
+        public static final TagKey<Block> NEEDS_SOLARIUM_TOOL = createTag("needs_solarium_tool");
 
         public static final TagKey<Block> SOLARIUM_PAXEL_MINEABLE = createTag("solarium_paxel_mineable");
 

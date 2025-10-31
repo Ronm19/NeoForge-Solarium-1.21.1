@@ -6,6 +6,17 @@
   "item.solarium.solar_ember": "Solar Ember",
   "item.solarium.solarium_chainsaw": "Solarium Chainsaw",
 
+  "item.solarium.solarium_sword": "Solarium Sword",
+  "item.solarium.solarium_pickaxe": "Solarium Pickaxe",
+  "item.solarium.solarium_axe": "Solarium Axe",
+  "item.solarium.solarium_shovel": "Solarium Shovel",
+  "item.solarium.solarium_hoe": "Solarium Hoe",
+  "item.solarium.solarium_paxel": "Solarium Paxel",
+  "item.solarium.solarium_hammer": "Solarium Hammer",
+  "item.solarium.solar_dagger": "Solar Dagger",
+  "item.solarium.solar_fang": "Solar Fang",
+
+
   "block.solarium.solarium_block": "Solarium Block",
   "block.solarium.raw_solarium_block": "Raw Solarium Block",
   "block.solarium.solarium_ore": "Solarium Ore",

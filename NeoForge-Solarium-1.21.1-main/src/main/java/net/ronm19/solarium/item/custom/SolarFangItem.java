@@ -13,13 +13,16 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.SmallFireball;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tier;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 
-public class SolarFangItem extends Item {
+public class SolarFangItem extends SwordItem {
 
-    public SolarFangItem(Properties properties) {
-        super(properties);
+
+    public SolarFangItem( Tier tier, Properties properties ) {
+        super(tier, properties);
     }
 
     /**
