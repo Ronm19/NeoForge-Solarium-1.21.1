@@ -4,6 +4,8 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.ronm19.solarium.block.ModBlocks;
 import net.ronm19.solarium.effect.ModEffects;
+import net.ronm19.solarium.enchantment.ModEnchantmentEffects;
+import net.ronm19.solarium.enchantment.ModEnchantments;
 import net.ronm19.solarium.item.ModArmorMaterials;
 import net.ronm19.solarium.item.ModCreativeModeTabs;
 import net.ronm19.solarium.item.ModItems;
@@ -58,6 +60,8 @@ public class SolariumMod {
         ModPotions.register(modEventBus);
 
         ModVillagers.register(modEventBus);
+
+        ModEnchantmentEffects.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.

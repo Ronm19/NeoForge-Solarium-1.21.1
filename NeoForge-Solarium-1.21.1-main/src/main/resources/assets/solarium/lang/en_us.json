@@ -30,6 +30,12 @@
   "item.minecraft.lingering_potion.effect.solar_blessing_potion": "Solar Blessing Lingering Potion",
   "item.minecraft.tipped_arrow.effect.solar_blessing_potion": "Arrow of Solar Blessing",
 
+  "painting.solarium.glory_of_the_solarium.title": "Glory of the Solarium",
+  "painting.solarium.glory_of_the_solarium.author": "Ronm19",
+
+  "enchantment.solarium.solar_fire": "Solar Fire",
+
+
   "block.solarium.solarium_block": "Solarium Block",
   "block.solarium.raw_solarium_block": "Raw Solarium Block",
   "block.solarium.solarium_ore": "Solarium Ore",
