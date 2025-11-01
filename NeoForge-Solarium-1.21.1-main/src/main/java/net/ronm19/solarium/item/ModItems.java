@@ -3,10 +3,12 @@ package net.ronm19.solarium.item;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.ronm19.solarium.SolariumMod;
 import net.ronm19.solarium.block.ModBlocks;
+import net.ronm19.solarium.entity.ModEntities;
 import net.ronm19.solarium.item.custom.*;
 
 public class ModItems {
@@ -69,6 +71,17 @@ public class ModItems {
 
     public static final DeferredItem<Item> SOLARIUM_HORSE_ARMOR = ITEMS.register("solarium_horse_armor",
             () -> new AnimalArmorItem(ModArmorMaterials.SOLARIUM, AnimalArmorItem.BodyType.EQUESTRIAN, false, new Item.Properties().fireResistant().stacksTo(1)));
+
+    // --------------------------------- SPAWN EGGS OF MONSTER ENTITIES ------------------------------------------
+
+    public static final DeferredItem<Item> SOLAR_CREEPER_SPAWN_EGG = ITEMS.register("solar_creeper_spawn_egg",
+            () -> new DeferredSpawnEggItem(ModEntities.SOLAR_CREEPER, 0xFFD54F, 0xFF6F00, new Item.Properties()));
+
+    public static final DeferredItem<Item> SOLAR_GHAST_SPAWN_EGG = ITEMS.register("solar_ghast_spawn_egg",
+            () -> new DeferredSpawnEggItem(ModEntities.SOLAR_GHAST, 0xFFB300, 0xFF5722, new Item.Properties()));
+
+    // --------------------------------- SPAWN EGGS OF PASSIVE/NEUTRAL ENTITIES ------------------------------------------
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

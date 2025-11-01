@@ -141,6 +141,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', ModItems.SOLARIUM_INGOT)
                 .unlockedBy("has_solarium_ingot", has(ModItems.SOLARIUM_INGOT)).save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.SOLAR_EDGE.get())
+                .pattern(" S ")
+                .pattern(" S ")
+                .pattern(" D ")
+                .define('D', Items.DIAMOND)
+                .define('S', ModItems.SOLARIUM_INGOT)
+                .unlockedBy("has_solarium_ingot", has(ModItems.SOLARIUM_INGOT)).save(recipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.SOLARIUM_HELMET.get())
                 .pattern("SSS")
                 .pattern("S S")

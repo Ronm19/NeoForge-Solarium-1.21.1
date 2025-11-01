@@ -53,6 +53,9 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.SOLARIUM_HORSE_ARMOR);
 
+                        output.accept(ModItems.SOLAR_CREEPER_SPAWN_EGG);
+                        output.accept(ModItems.SOLAR_GHAST_SPAWN_EGG);
+
                     }).build());
 
 

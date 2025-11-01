@@ -1,11 +1,16 @@
 package net.ronm19.solarium;
 
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.FlowerPotBlock;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.ronm19.solarium.block.ModBlocks;
 import net.ronm19.solarium.effect.ModEffects;
 import net.ronm19.solarium.enchantment.ModEnchantmentEffects;
 import net.ronm19.solarium.enchantment.ModEnchantments;
+import net.ronm19.solarium.entity.ModEntities;
+import net.ronm19.solarium.entity.client.SolarCreeperRenderer;
+import net.ronm19.solarium.entity.client.SolarGhastRenderer;
 import net.ronm19.solarium.item.ModArmorMaterials;
 import net.ronm19.solarium.item.ModCreativeModeTabs;
 import net.ronm19.solarium.item.ModItems;
@@ -66,6 +71,8 @@ public class SolariumMod {
 
         ModEnchantmentEffects.register(modEventBus);
 
+        ModEntities.register(modEventBus);
+
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
@@ -106,9 +113,8 @@ public class SolariumMod {
     static class ClientModEvents {
         @SubscribeEvent
         static void onClientSetup(FMLClientSetupEvent event) {
-            // Some client setup code
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+            EntityRenderers.register(ModEntities.SOLAR_CREEPER.get(), SolarCreeperRenderer::new);
+            EntityRenderers.register(ModEntities.SOLAR_GHAST.get(), SolarGhastRenderer::new);
         }
     }
 }

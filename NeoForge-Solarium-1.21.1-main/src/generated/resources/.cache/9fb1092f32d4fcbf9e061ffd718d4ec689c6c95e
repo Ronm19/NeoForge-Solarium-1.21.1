@@ -1,4 +1,4 @@
-// 1.21.1	2025-11-01T21:51:54.0796623	Recipes
+// 1.21.1	2025-11-01T23:19:04.5430771	Recipes
 30837cfc7e6fc8863fd8b692ad25ce786bf31856 data/solarium/advancement/recipes/building_blocks/solarium_slab.json
 e989ecfd9cb1ba73779ac7e97114ebf50d605898 data/solarium/advancement/recipes/building_blocks/solarium_stairs.json
 fe56770d352a6a9fbca12f5ebe06b4b32a00a786 data/solarium/advancement/recipes/building_blocks/solarium_wall.json
@@ -23,6 +23,7 @@ a59ef178d0fc99430c9bc1e5acd165d3fe6a9cae data/solarium/advancement/recipes/comba
 663083affd3688a5b43e744eb44e13cd11035810 data/solarium/advancement/recipes/combat/solarium_shovel.json
 9aaaa789f4f9bc9d6dcc4ee18c358ec9ff240dbf data/solarium/advancement/recipes/combat/solarium_sword.json
 593f30d79729777b17ae6bf96ae59e3274939128 data/solarium/advancement/recipes/combat/solar_dagger.json
+ca1c96c29c2b5d03b86370f30172cf128487cc9b data/solarium/advancement/recipes/combat/solar_edge.json
 841ae7ab595f36ad193eb27d460d68eb783dbb20 data/solarium/advancement/recipes/combat/solar_fang.json
 6b868c631eeb789d8fb30718ae39fe6eacc5cfa5 data/solarium/advancement/recipes/decorations/solarium_fence.json
 46a67ae4e80ad1f7d3ffce10bbe06788edde9dbe data/solarium/advancement/recipes/misc/solarium_block.json
@@ -74,6 +75,7 @@ e999a6b50b565fd68b9bab9d08268423f972def5 data/solarium/recipe/solar_amber_wood.j
 050d40b6dd4829e9128bebcea376e536a6780e73 data/solarium/recipe/solar_ash_planks.json
 9235aae064d4e3d539b9b33b81261cfbf8649b36 data/solarium/recipe/solar_ash_wood.json
 7ec876e5d9a27c2802124bc0883152c6e50d4460 data/solarium/recipe/solar_dagger.json
+8a723aa70c1b551be3522a10f993b275a54a71da data/solarium/recipe/solar_edge.json
 cc1a1550b690ee4138aab30ced973e2620748d7f data/solarium/recipe/solar_ember.json
 9148c63204f4e2911ef4e3a6847f45f20472e044 data/solarium/recipe/solar_ember_block.json
 0e4a6e576ef3e4f6a9920456e1c09a45a71713d3 data/solarium/recipe/solar_fang.json

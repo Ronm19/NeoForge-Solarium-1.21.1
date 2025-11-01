@@ -54,6 +54,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         saplingItem(ModBlocks.SOLAR_AMBER_SAPLING);
         saplingItem(ModBlocks.SOLAR_ASH_SAPLING);
+
+        withExistingParent(ModItems.SOLAR_CREEPER_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.SOLAR_GHAST_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     public void flowerItem(DeferredBlock<Block> block) {

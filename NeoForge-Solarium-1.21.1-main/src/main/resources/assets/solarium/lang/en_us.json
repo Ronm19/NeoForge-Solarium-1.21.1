@@ -30,6 +30,9 @@
   "item.minecraft.lingering_potion.effect.solar_blessing_potion": "Solar Blessing Lingering Potion",
   "item.minecraft.tipped_arrow.effect.solar_blessing_potion": "Arrow of Solar Blessing",
 
+  "item.solarium.solar_creeper_spawn_egg": "Solar Creeper Spawn Egg",
+  "item.solarium.solar_ghast_spawn_egg": "Solar Ghast Spawn Egg",
+
   "painting.solarium.glory_of_the_solarium.title": "Glory of the Solarium",
   "painting.solarium.glory_of_the_solarium.author": "Ronm19",
 
@@ -80,6 +83,8 @@
   "effect.solarium.solar_blessing": "Solar Blessing",
 
   "entity.minecraft.villager.solarium.solarger": "Solarger",
+  "entity.solarium.solar_creeper": "Solar Creeper",
+  "entity.solarium.solar_ghast": "Solar Ghast",
 
   "itemGroup.solarium.solarium_mod_items_tab": "Solarium Mod Items",
   "itemGroup.solarium.solarium_mod_blocks_tab": "Solarium Mod Blocks",
