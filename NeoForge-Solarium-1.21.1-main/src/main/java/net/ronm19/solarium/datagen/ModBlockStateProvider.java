@@ -80,6 +80,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
         leavesBlock(ModBlocks.SOLAR_AMBER_LEAVES);
         saplingBlock(ModBlocks.SOLAR_AMBER_SAPLING);
 
+        logBlock(((RotatedPillarBlock) ModBlocks.SOLAR_ASH_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.SOLAR_ASH_WOOD.get()), blockTexture(ModBlocks.SOLAR_ASH_LOG.get()), blockTexture(ModBlocks.SOLAR_ASH_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_SOLAR_ASH_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_SOLAR_ASH_WOOD.get()), blockTexture(ModBlocks.STRIPPED_SOLAR_ASH_LOG.get()), blockTexture(ModBlocks.STRIPPED_SOLAR_ASH_LOG.get()));
+
+        blockItem(ModBlocks.SOLAR_ASH_LOG);
+        blockItem(ModBlocks.SOLAR_ASH_WOOD);
+        blockItem(ModBlocks.STRIPPED_SOLAR_ASH_LOG);
+        blockItem(ModBlocks.STRIPPED_SOLAR_ASH_WOOD);
+
+        blockWithItem(ModBlocks.SOLAR_ASH_PLANKS);
+
+        leavesBlock(ModBlocks.SOLAR_ASH_LEAVES);
+        saplingBlock(ModBlocks.SOLAR_ASH_SAPLING);
+
 
 
 

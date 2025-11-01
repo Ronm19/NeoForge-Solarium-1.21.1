@@ -53,6 +53,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.SOLARIUM_HORSE_ARMOR.get());
 
         saplingItem(ModBlocks.SOLAR_AMBER_SAPLING);
+        saplingItem(ModBlocks.SOLAR_ASH_SAPLING);
     }
 
     public void flowerItem(DeferredBlock<Block> block) {

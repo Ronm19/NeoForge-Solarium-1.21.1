@@ -4,10 +4,12 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.placement.NetherPlacements;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.*;
@@ -18,6 +20,7 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> SOLAR_AMBER_PLACED_KEY = registerKey("solar_amber_placed");
+    public static final ResourceKey<PlacedFeature> SOLAR_ASH_PLACED_KEY = registerKey("solar_ash_placed");
 
     public static final ResourceKey<PlacedFeature> SOLARIUM_ORE_PLACED_KEY = registerKey("solarium_ore_placed");
     public static final ResourceKey<PlacedFeature> DEEPSLATE_SOLARIUM_ORE_PLACED_KEY = registerKey("deepslate_solarium_ore_placed");
@@ -30,6 +33,18 @@ public class ModPlacedFeatures {
         register(context, SOLAR_AMBER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SOLAR_AMBER_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
                         ModBlocks.SOLAR_AMBER_SAPLING.get()));
+
+        register(context,
+                SOLAR_ASH_PLACED_KEY,
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.SOLAR_ASH_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(1),   // How often the tree spawns (low = frequent, high = rare)InSquarePlacement.spread(),            // Spread it in the chunk
+                        HeightmapPlacement.onHeightmap(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES),
+                        // Place on top of terrain (Nether safe)
+                        BiomeFilter.biome()                     // Only in the biome it's registered for
+                )
+        );
+
+
 
 
         // Regular stone Solarium Ore

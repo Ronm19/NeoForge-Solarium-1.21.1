@@ -13,6 +13,7 @@ import net.neoforged.neoforge.common.world.BiomeModifier;
 import net.neoforged.neoforge.common.world.BiomeModifiers;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import net.ronm19.solarium.SolariumMod;
+import net.ronm19.solarium.worldgen.biome.ModBiomes;
 
 public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_TREE_SOLAR_AMBER = registerKey("add_tree_solar_amber");
@@ -28,7 +29,7 @@ public class ModBiomeModifiers {
         var biomes = context.lookup(Registries.BIOME);
 
         context.register(ADD_TREE_SOLAR_AMBER, new BiomeModifiers.AddFeaturesBiomeModifier(
-                HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.FOREST)),
+                HolderSet.direct(biomes.getOrThrow(ModBiomes.SOLAR_FOREST)),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.SOLAR_AMBER_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 

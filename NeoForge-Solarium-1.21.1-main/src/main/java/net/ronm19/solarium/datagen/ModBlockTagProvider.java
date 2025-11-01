@@ -46,6 +46,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.SOLAR_GRASS_BLOCK.get())
                 .add(ModBlocks.SOLAR_DIRT_BLOCK.get());
 
+        this.tag(BlockTags.CRIMSON_STEMS)
+                .add(ModBlocks.SOLAR_ASH_BLOCK.get());
+
         this.tag(BlockTags.WOODEN_FENCES)
                 .add(ModBlocks.SOLARIUM_FENCE.get());
 
@@ -53,10 +56,16 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.SOLAR_AMBER_LOG.get())
                 .add(ModBlocks.SOLAR_AMBER_WOOD.get())
                 .add(ModBlocks.STRIPPED_SOLAR_AMBER_LOG.get())
-                .add(ModBlocks.STRIPPED_SOLAR_AMBER_WOOD.get());
+                .add(ModBlocks.STRIPPED_SOLAR_AMBER_WOOD.get())
+                .add(ModBlocks.SOLAR_ASH_LOG.get())
+                .add(ModBlocks.SOLAR_ASH_WOOD.get())
+                .add(ModBlocks.STRIPPED_SOLAR_ASH_LOG.get())
+                .add(ModBlocks.STRIPPED_SOLAR_ASH_WOOD.get());
+
 
         this.tag(BlockTags.PLANKS)
-                .add(ModBlocks.SOLAR_AMBER_PLANKS.get());
+                .add(ModBlocks.SOLAR_AMBER_PLANKS.get())
+                .add(ModBlocks.SOLAR_ASH_PLANKS.get());
 
         this.tag(BlockTags.FENCES);
 

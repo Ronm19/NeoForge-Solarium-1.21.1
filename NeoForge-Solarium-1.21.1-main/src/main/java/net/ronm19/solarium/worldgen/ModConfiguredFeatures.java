@@ -1,5 +1,6 @@
 package net.ronm19.solarium.worldgen;
 
+import net.minecraft.client.particle.SuspendedParticle;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
@@ -23,6 +24,8 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> SOLAR_AMBER_KEY = registerKey("solar_amber");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SOLAR_ASH_KEY = registerKey("solar_ash");
+
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_SOLARIUM_ORE_KEY = registerKey("solarium_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_DEEPSLATE_SOLARIUM_ORE_KEY = registerKey("deepslate_solarium_ore");
 
@@ -37,6 +40,13 @@ public class ModConfiguredFeatures {
                 BlockStateProvider.simple(ModBlocks.SOLAR_AMBER_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(4), ConstantInt.of(2), 4),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, SOLAR_ASH_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.SOLAR_ASH_LOG.get()),
+                new StraightTrunkPlacer(3, 4, 2),
+                BlockStateProvider.simple(ModBlocks.SOLAR_ASH_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(1), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).dirt(BlockStateProvider.simple(ModBlocks.SOLAR_ASH_BLOCK.get())).build());
 
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);

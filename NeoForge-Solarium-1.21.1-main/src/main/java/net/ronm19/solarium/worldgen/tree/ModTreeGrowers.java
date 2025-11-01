@@ -9,4 +9,7 @@ import java.util.Optional;
 public class ModTreeGrowers {
     public static final TreeGrower SOLAR_AMBER = new TreeGrower(SolariumMod.MOD_ID + ":solar_amber",
             Optional.empty(), Optional.of(ModConfiguredFeatures.SOLAR_AMBER_KEY), Optional.empty());
+
+    public static final TreeGrower SOLAR_ASH = new TreeGrower(SolariumMod.MOD_ID + ":solar_ash",
+            Optional.empty(), Optional.of(ModConfiguredFeatures.SOLAR_ASH_KEY), Optional.empty());
 }

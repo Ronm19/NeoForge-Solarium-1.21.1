@@ -12,6 +12,8 @@ import net.ronm19.solarium.item.ModItems;
 import net.ronm19.solarium.potion.ModPotions;
 import net.ronm19.solarium.sound.ModSounds;
 import net.ronm19.solarium.villager.ModVillagers;
+import net.ronm19.solarium.worldgen.biome.ModBiomes;
+import net.ronm19.solarium.worldgen.biome.ModSurfaceRules;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -31,6 +33,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import terrablender.api.SurfaceRuleManager;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(SolariumMod.MOD_ID)
@@ -79,6 +82,11 @@ public class SolariumMod {
       event.enqueueWork(() -> {
           ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.SOLAR_ROSE.getId(), ModBlocks.POTTED_SOLAR_ROSE);
       });
+
+        ModBiomes.registerBiomes();
+
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeSolarForestRules());
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.NETHER, MOD_ID, ModSurfaceRules.makeSolarAshlandsRules());
     }
 
     // Add the example block item to the building blocks tab

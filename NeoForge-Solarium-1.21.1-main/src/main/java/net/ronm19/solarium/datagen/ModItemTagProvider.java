@@ -24,9 +24,15 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModBlocks.SOLAR_AMBER_LOG.asItem())
                 .add(ModBlocks.SOLAR_AMBER_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_SOLAR_AMBER_LOG.asItem())
-                .add(ModBlocks.STRIPPED_SOLAR_AMBER_WOOD.asItem());
+                .add(ModBlocks.STRIPPED_SOLAR_AMBER_WOOD.asItem())
+
+                .add(ModBlocks.SOLAR_ASH_LOG.asItem())
+                .add(ModBlocks.SOLAR_ASH_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_SOLAR_ASH_LOG.asItem())
+                .add(ModBlocks.STRIPPED_SOLAR_ASH_WOOD.asItem());
 
         tag(ItemTags.PLANKS)
-                .add(ModBlocks.SOLAR_AMBER_PLANKS.asItem());
+                .add(ModBlocks.SOLAR_AMBER_PLANKS.asItem())
+                .add(ModBlocks.SOLAR_ASH_PLANKS.asItem());
     }
 }

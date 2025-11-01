@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "solarium:block/stripped_solar_ash_wood_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "solarium:block/stripped_solar_ash_wood"
+    },
+    "axis=z": {
+      "model": "solarium:block/stripped_solar_ash_wood_horizontal",
+      "x": 90
+    }
+  }
+}

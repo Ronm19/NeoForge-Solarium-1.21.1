@@ -69,6 +69,14 @@
   "block.solarium.solar_amber_leaves": "Solar Amber Leaves",
   "block.solarium.solar_amber_sapling": "Solar Amber Sapling",
 
+  "block.solarium.solar_ash_log": "Solar Ash Log",
+  "block.solarium.solar_ash_wood": "Solar Ash Wood",
+  "block.solarium.solar_ash_planks": "Solar Ash Planks",
+  "block.solarium.stripped_solar_ash_log": "Stripped Solar Ash Log",
+  "block.solarium.stripped_solar_ash_wood": "Stripped Solar Ash Wood",
+  "block.solarium.solar_ash_leaves": "Solar Ash Leaves",
+  "block.solarium.solar_ash_sapling": "Solar Ash Sapling",
+
   "effect.solarium.solar_blessing": "Solar Blessing",
 
   "entity.minecraft.villager.solarium.solarger": "Solarger",

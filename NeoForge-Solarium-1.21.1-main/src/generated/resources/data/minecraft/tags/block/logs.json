@@ -3,6 +3,10 @@
     "solarium:solar_amber_log",
     "solarium:solar_amber_wood",
     "solarium:stripped_solar_amber_log",
-    "solarium:stripped_solar_amber_wood"
+    "solarium:stripped_solar_amber_wood",
+    "solarium:solar_ash_log",
+    "solarium:solar_ash_wood",
+    "solarium:stripped_solar_ash_log",
+    "solarium:stripped_solar_ash_wood"
   ]
 }

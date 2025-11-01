@@ -209,6 +209,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         // Stripped Wood from Stripped Log
         woodFromLogs(recipeOutput, ModBlocks.STRIPPED_SOLAR_AMBER_WOOD.get(), ModBlocks.STRIPPED_SOLAR_AMBER_LOG.get());
 
+        // === Solar Ash Wood Recipes ===
+
+        // Planks from Logs (4 planks per log)
+        planksFromLog(recipeOutput, ModBlocks.SOLAR_ASH_PLANKS.get(), ModTags.Items.SOLAR_ASH_LOGS, 4);
+        // Wood from Log (3 wood blocks per 4 logs)
+        woodFromLogs(recipeOutput, ModBlocks.SOLAR_ASH_WOOD.get(), ModBlocks.SOLAR_ASH_LOG.get());
+        // Stripped Wood from Stripped Log
+        woodFromLogs(recipeOutput, ModBlocks.STRIPPED_SOLAR_ASH_WOOD.get(), ModBlocks.STRIPPED_SOLAR_ASH_LOG.get());
+
         // ------------- Cooking Recipes ---------- //
 
         oreSmelting(recipeOutput, SOLARIUM_INGOT_SMELTABLES, RecipeCategory.MISC, ModItems.SOLARIUM_INGOT.get(), 0.25f, 200, "solarium_ingot");

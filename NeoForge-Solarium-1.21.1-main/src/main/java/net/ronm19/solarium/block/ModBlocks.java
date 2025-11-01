@@ -12,10 +12,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.ronm19.solarium.SolariumMod;
-import net.ronm19.solarium.block.custom.ModSolarRotatedPillarBlock;
-import net.ronm19.solarium.block.custom.ModSolarSaplingBlock;
-import net.ronm19.solarium.block.custom.SolarLampBlock;
-import net.ronm19.solarium.block.custom.SolarTomatoCropBlock;
+import net.ronm19.solarium.block.custom.*;
 import net.ronm19.solarium.item.ModItems;
 import net.ronm19.solarium.worldgen.tree.ModTreeGrowers;
 
@@ -99,6 +96,22 @@ public class ModBlocks {
             () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
     public static final DeferredBlock<Block> SOLAR_AMBER_SAPLING = registerBlock("solar_amber_sapling",
             () -> new ModSolarSaplingBlock(ModTreeGrowers.SOLAR_AMBER, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+
+    public static final DeferredBlock<Block> SOLAR_ASH_LOG = registerBlock("solar_ash_log",
+            () -> new ModSolarAshRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_STEM)));
+    public static final DeferredBlock<Block> SOLAR_ASH_WOOD = registerBlock("solar_ash_wood",
+            () -> new ModSolarAshRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_HYPHAE)));
+    public static final DeferredBlock<Block> STRIPPED_SOLAR_ASH_LOG = registerBlock("stripped_solar_ash_log",
+            () -> new ModSolarAshRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_CRIMSON_STEM)));
+    public static final DeferredBlock<Block> STRIPPED_SOLAR_ASH_WOOD = registerBlock("stripped_solar_ash_wood",
+            () -> new ModSolarAshRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_CRIMSON_HYPHAE)));
+
+    public static final DeferredBlock<Block> SOLAR_ASH_PLANKS = registerBlock("solar_ash_planks",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS)));
+    public static final DeferredBlock<Block> SOLAR_ASH_LEAVES = registerBlock("solar_ash_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+    public static final DeferredBlock<Block> SOLAR_ASH_SAPLING = registerBlock("solar_ash_sapling",
+            () -> new ModSolarAshSaplingBlock(ModTreeGrowers.SOLAR_ASH, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
 
 

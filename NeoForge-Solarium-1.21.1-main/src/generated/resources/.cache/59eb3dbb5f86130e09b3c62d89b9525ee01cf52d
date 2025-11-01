@@ -1,4 +1,4 @@
-// 1.21.1	2025-11-01T19:50:39.4041302	Loot Tables
+// 1.21.1	2025-11-01T21:51:54.0796623	Loot Tables
 a50a7ae3c55e73c0defe6276bf263c84027c7841 data/solarium/loot_table/blocks/deepslate_solarium_ore.json
 6b309a2914783ea1475e81f582fc2e754cb7c2ad data/solarium/loot_table/blocks/potted_solar_rose.json
 6232556ebe0145ab3f56e45f9ee3e30740ce73b5 data/solarium/loot_table/blocks/raw_solarium_block.json
@@ -19,6 +19,11 @@ ffb849fcdf19b6a48efc36129a23b7267e1e6f3a data/solarium/loot_table/blocks/solariu
 f9da5514b0e472fea7e32a37ce708810c313515b data/solarium/loot_table/blocks/solar_amber_sapling.json
 bd50b1bd8f66875cdb616447cb3354994237cefd data/solarium/loot_table/blocks/solar_amber_wood.json
 63665b9497abf8cd13a9d14bdb97c39c87775a6e data/solarium/loot_table/blocks/solar_ash_block.json
+fb4f98e417aae69f17799d231180a52fb70b91cc data/solarium/loot_table/blocks/solar_ash_leaves.json
+3d7ed89bf482953534259403ce090004ff7aa246 data/solarium/loot_table/blocks/solar_ash_log.json
+761b4de467e80926349ae080618630e8753809cb data/solarium/loot_table/blocks/solar_ash_planks.json
+e1c060475602508bea3ef64490502912a32eb98c data/solarium/loot_table/blocks/solar_ash_sapling.json
+6793ffb7fd5ff381742678ecac5a870001f1dc05 data/solarium/loot_table/blocks/solar_ash_wood.json
 0dc594b831ea3ba4d78e786232e806a5b54bf5b2 data/solarium/loot_table/blocks/solar_dirt_block.json
 09732e208838940e6b3702a151287850054940e7 data/solarium/loot_table/blocks/solar_ember_block.json
 a577eb496989f4b8ae27b1e78954f6b4d49fdf6a data/solarium/loot_table/blocks/solar_grass_block.json
@@ -28,3 +33,5 @@ a577eb496989f4b8ae27b1e78954f6b4d49fdf6a data/solarium/loot_table/blocks/solar_g
 e54cb32226ec58803b8f366c87dedb97a44f9454 data/solarium/loot_table/blocks/solar_workbench_block.json
 13062584e054e6ca1b4e92d507a726fe5e072d85 data/solarium/loot_table/blocks/stripped_solar_amber_log.json
 09dba44e85714f7325d99e6db4b538a6e32269c5 data/solarium/loot_table/blocks/stripped_solar_amber_wood.json
+a1d39eaa12041fe000dcee8ba7bc59145120da36 data/solarium/loot_table/blocks/stripped_solar_ash_log.json
+beb6ebd50b30f710cf4cc2bacb009ae512e7e2b8 data/solarium/loot_table/blocks/stripped_solar_ash_wood.json

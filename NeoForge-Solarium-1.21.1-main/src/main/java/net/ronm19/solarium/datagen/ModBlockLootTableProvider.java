@@ -71,6 +71,19 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.SOLAR_AMBER_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.SOLAR_AMBER_LEAVES.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
+        this.dropSelf(ModBlocks.SOLAR_ASH_LOG.get());
+        this.dropSelf(ModBlocks.SOLAR_ASH_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_SOLAR_ASH_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_SOLAR_ASH_WOOD.get());
+
+        this.dropSelf(ModBlocks.SOLAR_ASH_PLANKS.get());
+        this.dropSelf(ModBlocks.SOLAR_ASH_SAPLING.get());
+
+        this.add(ModBlocks.SOLAR_ASH_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.SOLAR_ASH_LEAVES.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+
+
         this.add(ModBlocks.SOLARIUM_ORE.get(),
                 block -> createOreDrop(ModBlocks.SOLARIUM_ORE.get(), ModItems.RAW_SOLARIUM_INGOT.get()));
         this.add(ModBlocks.DEEPSLATE_SOLARIUM_ORE.get(),

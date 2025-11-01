@@ -11,6 +11,7 @@ import net.ronm19.solarium.enchantment.ModEnchantments;
 import net.ronm19.solarium.worldgen.ModBiomeModifiers;
 import net.ronm19.solarium.worldgen.ModConfiguredFeatures;
 import net.ronm19.solarium.worldgen.ModPlacedFeatures;
+import net.ronm19.solarium.worldgen.biome.ModBiomes;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
@@ -20,6 +21,7 @@ public class ModDataRegistryProvider extends DatapackBuiltinEntriesProvider {
             .add(Registries.ENCHANTMENT, ModEnchantments::bootstrap)
             .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures ::bootstrap)
             .add(Registries.PLACED_FEATURE, ModPlacedFeatures ::bootstrap)
+            .add(Registries.BIOME, ModBiomes::bootstrap)
             .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers ::bootstrap);
 
 

@@ -25,6 +25,7 @@ public class ModTags {
     public static class Items {
 
         public static final TagKey<Item> SOLAR_AMBER_LOGS = createTag("solar_amber_logs");
+        public static final TagKey<Item> SOLAR_ASH_LOGS = createTag("solar_ash_logs");
 
         private static TagKey<Item> createTag( String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(SolariumMod.MOD_ID, name));
