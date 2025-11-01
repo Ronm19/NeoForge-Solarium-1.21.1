@@ -12,6 +12,7 @@ import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import net.ronm19.solarium.SolariumMod;
 import net.ronm19.solarium.block.ModBlocks;
 import net.ronm19.solarium.item.ModItems;
+import net.ronm19.solarium.util.ModTags;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -135,7 +136,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.SOLAR_FANG.get())
                 .pattern("  S")
                 .pattern(" S ")
-                .pattern(" T ")
+                .pattern("T  ")
                 .define('T', Items.STICK)
                 .define('S', ModItems.SOLARIUM_INGOT)
                 .unlockedBy("has_solarium_ingot", has(ModItems.SOLARIUM_INGOT)).save(recipeOutput);
@@ -199,6 +200,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         trapdoorBuilder(ModBlocks.SOLARIUM_TRAPDOOR.get(), Ingredient.of(ModBlocks.SOLARIUM_BLOCK.get())).group("solarium")
                 .unlockedBy("has_solarium_block", has(ModBlocks.SOLARIUM_BLOCK.get())).save(recipeOutput);
 
+        // === Solar Amber Wood Recipes ===
+
+        // Planks from Logs (4 planks per log)
+        planksFromLog(recipeOutput, ModBlocks.SOLAR_AMBER_PLANKS.get(), ModTags.Items.SOLAR_AMBER_LOGS, 4);
+        // Wood from Log (3 wood blocks per 4 logs)
+        woodFromLogs(recipeOutput, ModBlocks.SOLAR_AMBER_WOOD.get(), ModBlocks.SOLAR_AMBER_LOG.get());
+        // Stripped Wood from Stripped Log
+        woodFromLogs(recipeOutput, ModBlocks.STRIPPED_SOLAR_AMBER_WOOD.get(), ModBlocks.STRIPPED_SOLAR_AMBER_LOG.get());
 
         // ------------- Cooking Recipes ---------- //
 

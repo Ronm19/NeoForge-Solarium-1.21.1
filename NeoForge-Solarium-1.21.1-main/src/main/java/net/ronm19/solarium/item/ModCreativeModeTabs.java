@@ -76,6 +76,13 @@ public class ModCreativeModeTabs {
                        output.accept(ModBlocks.SOLAR_DIRT_BLOCK);
                        output.accept(ModBlocks.SOLAR_ROSE);
 
+                       output.accept(ModBlocks.SOLAR_AMBER_LOG);
+                       output.accept(ModBlocks.SOLAR_AMBER_WOOD);
+                       output.accept(ModBlocks.STRIPPED_SOLAR_AMBER_LOG);
+                       output.accept(ModBlocks.STRIPPED_SOLAR_AMBER_WOOD);
+                       output.accept(ModBlocks.SOLAR_AMBER_PLANKS);
+                       output.accept(ModBlocks.SOLAR_AMBER_SAPLING);
+
                        output.accept(ModBlocks.SOLAR_WORKBENCH_BLOCK);
 
                        output.accept(ModBlocks.SOLARIUM_STAIRS);

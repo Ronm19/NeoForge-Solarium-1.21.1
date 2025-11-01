@@ -3,6 +3,7 @@ package net.ronm19.solarium.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.ronm19.solarium.SolariumMod;
@@ -47,6 +48,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         this.tag(BlockTags.WOODEN_FENCES)
                 .add(ModBlocks.SOLARIUM_FENCE.get());
+
+        this.tag(BlockTags.LOGS)
+                .add(ModBlocks.SOLAR_AMBER_LOG.get())
+                .add(ModBlocks.SOLAR_AMBER_WOOD.get())
+                .add(ModBlocks.STRIPPED_SOLAR_AMBER_LOG.get())
+                .add(ModBlocks.STRIPPED_SOLAR_AMBER_WOOD.get());
+
+        this.tag(BlockTags.PLANKS)
+                .add(ModBlocks.SOLAR_AMBER_PLANKS.get());
 
         this.tag(BlockTags.FENCES);
 

@@ -65,6 +65,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.SOLARIUM_TRAPDOOR, "_bottom");
         customLamp(ModBlocks.SOLAR_LAMP_BLOCK);
 
+        logBlock(((RotatedPillarBlock) ModBlocks.SOLAR_AMBER_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.SOLAR_AMBER_WOOD.get()), blockTexture(ModBlocks.SOLAR_AMBER_LOG.get()), blockTexture(ModBlocks.SOLAR_AMBER_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_SOLAR_AMBER_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_SOLAR_AMBER_WOOD.get()), blockTexture(ModBlocks.STRIPPED_SOLAR_AMBER_LOG.get()), blockTexture(ModBlocks.STRIPPED_SOLAR_AMBER_LOG.get()));
+
+        blockItem(ModBlocks.SOLAR_AMBER_LOG);
+        blockItem(ModBlocks.SOLAR_AMBER_WOOD);
+        blockItem(ModBlocks.STRIPPED_SOLAR_AMBER_LOG);
+        blockItem(ModBlocks.STRIPPED_SOLAR_AMBER_WOOD);
+
+        blockWithItem(ModBlocks.SOLAR_AMBER_PLANKS);
+
+        leavesBlock(ModBlocks.SOLAR_AMBER_LEAVES);
+        saplingBlock(ModBlocks.SOLAR_AMBER_SAPLING);
+
+
+
+
 
     }
 
@@ -88,6 +106,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         // Automatically also generate the item model (with the block model as its parent)
         simpleBlockItem(block, model);
+    }
+
+    private void leavesBlock(DeferredBlock<Block> deferredBlock) {
+        simpleBlockWithItem(deferredBlock.get(),
+                models().singleTexture(BuiltInRegistries.BLOCK.getKey(deferredBlock.get()).getPath(), ResourceLocation.parse("minecraft:block/leaves"),
+                        "all", blockTexture(deferredBlock.get())).renderType("cutout"));
+    }
+
+    private void saplingBlock(DeferredBlock<Block> deferredBlock) {
+        simpleBlock(deferredBlock.get(), models().cross(BuiltInRegistries.BLOCK.getKey(deferredBlock.get()).getPath(), blockTexture(deferredBlock.get())).renderType("cutout"));
     }
 
     private void blockItem( DeferredBlock<Block> deferredBlock ) {

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "solarium:solar_amber_logs"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "solarium:solar_amber_planks"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "solarium:block/solar_amber_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "solarium:block/solar_amber_log"
+    },
+    "axis=z": {
+      "model": "solarium:block/solar_amber_log_horizontal",
+      "x": 90
+    }
+  }
+}

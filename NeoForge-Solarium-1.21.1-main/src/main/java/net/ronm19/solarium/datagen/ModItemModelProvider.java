@@ -51,12 +51,20 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.SOLARIUM_BOOTS.get());
 
         basicItem(ModItems.SOLARIUM_HORSE_ARMOR.get());
+
+        saplingItem(ModBlocks.SOLAR_AMBER_SAPLING);
     }
 
     public void flowerItem(DeferredBlock<Block> block) {
         this.withExistingParent(block.getId().getPath(), mcLoc("item/generated"))
                 .texture("layer0",  ResourceLocation.fromNamespaceAndPath(SolariumMod.MOD_ID,
                         "block/" + block.getId().getPath()));
+    }
+
+    private void saplingItem( DeferredBlock<Block> item) {
+        withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(SolariumMod.MOD_ID, "block/" + item.getId().getPath()));
     }
 
     public void buttonItem( DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {

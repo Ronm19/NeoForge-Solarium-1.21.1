@@ -1,4 +1,4 @@
-// 1.21	2025-10-31T14:45:26.0027315	Loot Tables
+// 1.21.1	2025-11-01T19:50:39.4041302	Loot Tables
 a50a7ae3c55e73c0defe6276bf263c84027c7841 data/solarium/loot_table/blocks/deepslate_solarium_ore.json
 6b309a2914783ea1475e81f582fc2e754cb7c2ad data/solarium/loot_table/blocks/potted_solar_rose.json
 6232556ebe0145ab3f56e45f9ee3e30740ce73b5 data/solarium/loot_table/blocks/raw_solarium_block.json
@@ -13,6 +13,11 @@ a7e67fb07fe3972cac3213029e64133e2b146b13 data/solarium/loot_table/blocks/solariu
 f44781f9b75ba5c5492d69ba98c3c4ced2e8d00e data/solarium/loot_table/blocks/solarium_stairs.json
 cb5302e5b717d6c1f47bbb32867df38ed649de89 data/solarium/loot_table/blocks/solarium_trapdoor.json
 ffb849fcdf19b6a48efc36129a23b7267e1e6f3a data/solarium/loot_table/blocks/solarium_wall.json
+733270c6277972052d2a4b220b0c229f53b24c88 data/solarium/loot_table/blocks/solar_amber_leaves.json
+23edd5e88068b184f81ece8c6b3ae672f01cf898 data/solarium/loot_table/blocks/solar_amber_log.json
+9176bcb59478acb195f5c7cb89556910b35e3c02 data/solarium/loot_table/blocks/solar_amber_planks.json
+f9da5514b0e472fea7e32a37ce708810c313515b data/solarium/loot_table/blocks/solar_amber_sapling.json
+bd50b1bd8f66875cdb616447cb3354994237cefd data/solarium/loot_table/blocks/solar_amber_wood.json
 63665b9497abf8cd13a9d14bdb97c39c87775a6e data/solarium/loot_table/blocks/solar_ash_block.json
 0dc594b831ea3ba4d78e786232e806a5b54bf5b2 data/solarium/loot_table/blocks/solar_dirt_block.json
 09732e208838940e6b3702a151287850054940e7 data/solarium/loot_table/blocks/solar_ember_block.json
@@ -21,3 +26,5 @@ a577eb496989f4b8ae27b1e78954f6b4d49fdf6a data/solarium/loot_table/blocks/solar_g
 348eb7be138de1391e58d58503ed308cbf035ae5 data/solarium/loot_table/blocks/solar_rose.json
 5c68fef64465a3d3417425cfc1b3a4aedada064b data/solarium/loot_table/blocks/solar_tomato_crop.json
 e54cb32226ec58803b8f366c87dedb97a44f9454 data/solarium/loot_table/blocks/solar_workbench_block.json
+13062584e054e6ca1b4e92d507a726fe5e072d85 data/solarium/loot_table/blocks/stripped_solar_amber_log.json
+09dba44e85714f7325d99e6db4b538a6e32269c5 data/solarium/loot_table/blocks/stripped_solar_amber_wood.json

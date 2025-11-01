@@ -30,7 +30,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-@EventBusSubscriber(modid = SolariumMod.MOD_ID, bus = EventBusSubscriber.Bus.GAME)
+@EventBusSubscriber(modid = SolariumMod.MOD_ID)
 public class ModEvents {
 
 

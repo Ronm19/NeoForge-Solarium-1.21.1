@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "solarium:block/solar_amber_sapling"
+  }
+}

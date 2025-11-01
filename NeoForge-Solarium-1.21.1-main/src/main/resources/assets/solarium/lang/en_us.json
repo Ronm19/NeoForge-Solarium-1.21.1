@@ -61,6 +61,14 @@
   "block.solarium.solarium_trapdoor": "Solarium Trapdoor",
   "block.solarium.solarium_door": "Solarium Door",
 
+  "block.solarium.solar_amber_log": "Solar Amber Log",
+  "block.solarium.solar_amber_wood": "Solar Amber Wood",
+  "block.solarium.solar_amber_planks": "Solar Amber Planks",
+  "block.solarium.stripped_solar_amber_log": "Stripped Solar Amber Log",
+  "block.solarium.stripped_solar_amber_wood": "Stripped Solar Amber Wood",
+  "block.solarium.solar_amber_leaves": "Solar Amber Leaves",
+  "block.solarium.solar_amber_sapling": "Solar Amber Sapling",
+
   "effect.solarium.solar_blessing": "Solar Blessing",
 
   "entity.minecraft.villager.solarium.solarger": "Solarger",

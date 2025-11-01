@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "solarium:block/solar_amber_log",
+    "side": "solarium:block/solar_amber_log"
+  }
+}

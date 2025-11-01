@@ -12,9 +12,12 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.ronm19.solarium.SolariumMod;
+import net.ronm19.solarium.block.custom.ModSolarRotatedPillarBlock;
+import net.ronm19.solarium.block.custom.ModSolarSaplingBlock;
 import net.ronm19.solarium.block.custom.SolarLampBlock;
 import net.ronm19.solarium.block.custom.SolarTomatoCropBlock;
 import net.ronm19.solarium.item.ModItems;
+import net.ronm19.solarium.worldgen.tree.ModTreeGrowers;
 
 import java.util.function.Supplier;
 
@@ -80,6 +83,22 @@ public class ModBlocks {
             () -> new TrapDoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_TRAPDOOR).sound(SoundType.STONE).noOcclusion()));
     public static final DeferredBlock<Block> SOLARIUM_DOOR = registerBlock("solarium_door",
             () -> new DoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR).sound(SoundType.STONE).noOcclusion()));
+
+    public static final DeferredBlock<Block> SOLAR_AMBER_LOG = registerBlock("solar_amber_log",
+            () -> new ModSolarRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
+    public static final DeferredBlock<Block> SOLAR_AMBER_WOOD = registerBlock("solar_amber_wood",
+            () -> new ModSolarRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD)));
+    public static final DeferredBlock<Block> STRIPPED_SOLAR_AMBER_LOG = registerBlock("stripped_solar_amber_log",
+            () -> new ModSolarRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)));
+    public static final DeferredBlock<Block> STRIPPED_SOLAR_AMBER_WOOD = registerBlock("stripped_solar_amber_wood",
+            () -> new ModSolarRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final DeferredBlock<Block> SOLAR_AMBER_PLANKS = registerBlock("solar_amber_planks",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+    public static final DeferredBlock<Block> SOLAR_AMBER_LEAVES = registerBlock("solar_amber_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+    public static final DeferredBlock<Block> SOLAR_AMBER_SAPLING = registerBlock("solar_amber_sapling",
+            () -> new ModSolarSaplingBlock(ModTreeGrowers.SOLAR_AMBER, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
 
 

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "solarium:solar_amber_log",
+    "solarium:solar_amber_wood",
+    "solarium:stripped_solar_amber_log",
+    "solarium:stripped_solar_amber_wood"
+  ]
+}

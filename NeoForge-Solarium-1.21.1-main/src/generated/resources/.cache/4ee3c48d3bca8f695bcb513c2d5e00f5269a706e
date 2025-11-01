@@ -1,4 +1,4 @@
-// 1.21	2025-10-31T14:45:25.9972219	Item Models: solarium
+// 1.21.1	2025-11-01T19:50:39.3910401	Item Models: solarium
 a91d12fb089e9e8d57937be2cef26c207a4f3a0a assets/solarium/models/item/raw_solarium_ingot.json
 e8455c4e8ba9fe903353edf2a35e6846bca7536f assets/solarium/models/item/solarium_axe.json
 9cf22b82eb0907394c9d7e031bbf05f363520ce4 assets/solarium/models/item/solarium_boots.json
@@ -18,6 +18,7 @@ eb434fc4121431243f3aee1fd772e36bba03c8f0 assets/solarium/models/item/solarium_pi
 3822f119d36d497cdd1afbfdfb921f4e02c8a1a9 assets/solarium/models/item/solarium_shovel.json
 26dca99f447bfcfd697d6f400ceed30eaa94368f assets/solarium/models/item/solarium_sword.json
 e0782aa4c694097a8c32fbe2a3a8a37d59f51b0a assets/solarium/models/item/solarium_wall.json
+43c8f1d78a8978fe60efec9d92938b742a02fbc4 assets/solarium/models/item/solar_amber_sapling.json
 ed4f72556d27c760b0dfa6661870d2437313567d assets/solarium/models/item/solar_apple.json
 e9411a90c54037d78e157364ae3370ae411248cd assets/solarium/models/item/solar_dagger.json
 8c40f66f432237192c471b43b2e723440892fbfe assets/solarium/models/item/solar_ember.json
