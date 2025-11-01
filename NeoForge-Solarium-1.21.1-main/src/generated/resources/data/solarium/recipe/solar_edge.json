@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "S": {
+      "item": "solarium:solarium_ingot"
+    }
+  },
+  "pattern": [
+    " S ",
+    " S ",
+    " D "
+  ],
+  "result": {
+    "count": 1,
+    "id": "solarium:solar_edge"
+  }
+}
