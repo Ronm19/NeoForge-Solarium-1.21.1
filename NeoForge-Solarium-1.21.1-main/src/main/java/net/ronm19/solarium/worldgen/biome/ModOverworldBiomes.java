@@ -28,6 +28,9 @@ public class ModOverworldBiomes {
         BiomeDefaultFeatures.commonSpawns(spawnBuilder, 30);
 
         spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(ModEntities.SOLAR_CREEPER.get(), 20, 2, 3));
+        spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(ModEntities.SOLAR_STALKER.get(), 20, 2, 3));
+
+        spawnBuilder.addSpawn(MobCategory.AXOLOTLS, new MobSpawnSettings.SpawnerData(ModEntities.SOLAR_AXOLOTL.get(), 20, 2, 3));
 
 
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, 10, 1, 2));

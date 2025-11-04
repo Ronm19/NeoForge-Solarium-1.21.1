@@ -9,8 +9,10 @@ import net.ronm19.solarium.effect.ModEffects;
 import net.ronm19.solarium.enchantment.ModEnchantmentEffects;
 import net.ronm19.solarium.enchantment.ModEnchantments;
 import net.ronm19.solarium.entity.ModEntities;
+import net.ronm19.solarium.entity.client.SolarAxolotlRenderer;
 import net.ronm19.solarium.entity.client.SolarCreeperRenderer;
 import net.ronm19.solarium.entity.client.SolarGhastRenderer;
+import net.ronm19.solarium.entity.client.SolarStalkerRenderer;
 import net.ronm19.solarium.item.ModArmorMaterials;
 import net.ronm19.solarium.item.ModCreativeModeTabs;
 import net.ronm19.solarium.item.ModItems;
@@ -115,6 +117,10 @@ public class SolariumMod {
         static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.SOLAR_CREEPER.get(), SolarCreeperRenderer::new);
             EntityRenderers.register(ModEntities.SOLAR_GHAST.get(), SolarGhastRenderer::new);
+            EntityRenderers.register(ModEntities.SOLAR_STALKER.get(), SolarStalkerRenderer ::new);
+
+
+            EntityRenderers.register(ModEntities.SOLAR_AXOLOTL.get(), SolarAxolotlRenderer ::new);
         }
     }
 }

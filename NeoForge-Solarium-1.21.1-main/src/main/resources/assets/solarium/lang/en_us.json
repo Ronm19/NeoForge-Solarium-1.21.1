@@ -32,6 +32,8 @@
 
   "item.solarium.solar_creeper_spawn_egg": "Solar Creeper Spawn Egg",
   "item.solarium.solar_ghast_spawn_egg": "Solar Ghast Spawn Egg",
+  "item.solarium.solar_axolotl_spawn_egg": "Solar Axolotl Spawn Egg",
+  "item.solarium.solar_stalker_spawn_egg": "Solar Stalker Spawn Egg",
 
   "painting.solarium.glory_of_the_solarium.title": "Glory of the Solarium",
   "painting.solarium.glory_of_the_solarium.author": "Ronm19",
@@ -85,6 +87,8 @@
   "entity.minecraft.villager.solarium.solarger": "Solarger",
   "entity.solarium.solar_creeper": "Solar Creeper",
   "entity.solarium.solar_ghast": "Solar Ghast",
+  "entity.solarium.solar_axolotl": "Solar Axolotl",
+  "entity.solarium.solar_stalker": "Solar Stalker",
 
   "itemGroup.solarium.solarium_mod_items_tab": "Solarium Mod Items",
   "itemGroup.solarium.solarium_mod_blocks_tab": "Solarium Mod Blocks",

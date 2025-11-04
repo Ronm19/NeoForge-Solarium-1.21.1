@@ -94,14 +94,15 @@
         "weight": 10
       }
     ],
-    "axolotls": [],
-    "creature": [
+    "axolotls": [
       {
-        "type": "minecraft:sheep",
+        "type": "solarium:solar_axolotl",
         "maxCount": 3,
         "minCount": 2,
         "weight": 20
-      },
+      }
+    ],
+    "creature": [
       {
         "type": "minecraft:wolf",
         "maxCount": 2,
@@ -158,6 +159,12 @@
         "maxCount": 1,
         "minCount": 1,
         "weight": 5
+      },
+      {
+        "type": "solarium:solar_creeper",
+        "maxCount": 3,
+        "minCount": 2,
+        "weight": 20
       }
     ],
     "underground_water_creature": [

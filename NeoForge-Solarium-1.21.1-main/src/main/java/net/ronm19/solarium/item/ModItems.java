@@ -80,7 +80,13 @@ public class ModItems {
     public static final DeferredItem<Item> SOLAR_GHAST_SPAWN_EGG = ITEMS.register("solar_ghast_spawn_egg",
             () -> new DeferredSpawnEggItem(ModEntities.SOLAR_GHAST, 0xFFB300, 0xFF5722, new Item.Properties()));
 
+    public static final DeferredItem<Item> SOLAR_STALKER_SPAWN_EGG = ITEMS.register("solar_stalker_spawn_egg",
+            () -> new DeferredSpawnEggItem(ModEntities.SOLAR_STALKER, 0x3C0F4F, 0xFFA600, new Item.Properties()));
+
     // --------------------------------- SPAWN EGGS OF PASSIVE/NEUTRAL ENTITIES ------------------------------------------
+
+    public static final DeferredItem<Item> SOLAR_AXOLOTL_SPAWN_EGG = ITEMS.register("solar_axolotl_spawn_egg",
+            () -> new DeferredSpawnEggItem(ModEntities.SOLAR_AXOLOTL, 0xFAD85D, 0xE06B24, new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {

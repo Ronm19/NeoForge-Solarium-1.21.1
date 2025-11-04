@@ -55,6 +55,9 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.SOLAR_CREEPER_SPAWN_EGG);
                         output.accept(ModItems.SOLAR_GHAST_SPAWN_EGG);
+                        output.accept(ModItems.SOLAR_STALKER_SPAWN_EGG);
+
+                        output.accept(ModItems.SOLAR_AXOLOTL_SPAWN_EGG);
 
                     }).build());
 

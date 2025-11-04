@@ -53,7 +53,7 @@
     "misc": [],
     "monster": [
       {
-        "type": "minecraft:ghast",
+        "type": "solarium:solar_ghast",
         "maxCount": 1,
         "minCount": 1,
         "weight": 10
