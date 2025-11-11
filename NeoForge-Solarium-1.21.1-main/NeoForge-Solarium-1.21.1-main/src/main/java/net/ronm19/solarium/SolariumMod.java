@@ -1,9 +1,26 @@
 package net.ronm19.solarium;
 
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.FlowerPotBlock;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.ronm19.solarium.block.ModBlocks;
+import net.ronm19.solarium.effect.ModEffects;
+import net.ronm19.solarium.enchantment.ModEnchantmentEffects;
+import net.ronm19.solarium.enchantment.ModEnchantments;
+import net.ronm19.solarium.entity.ModEntities;
+import net.ronm19.solarium.entity.client.SolarAxolotlRenderer;
+import net.ronm19.solarium.entity.client.SolarCreeperRenderer;
+import net.ronm19.solarium.entity.client.SolarGhastRenderer;
+import net.ronm19.solarium.entity.client.SolarStalkerRenderer;
+import net.ronm19.solarium.item.ModArmorMaterials;
 import net.ronm19.solarium.item.ModCreativeModeTabs;
 import net.ronm19.solarium.item.ModItems;
+import net.ronm19.solarium.potion.ModPotions;
+import net.ronm19.solarium.sound.ModSounds;
+import net.ronm19.solarium.villager.ModVillagers;
+import net.ronm19.solarium.worldgen.biome.ModBiomes;
+import net.ronm19.solarium.worldgen.biome.ModSurfaceRules;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -23,6 +40,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import terrablender.api.SurfaceRuleManager;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(SolariumMod.MOD_ID)
@@ -45,6 +63,18 @@ public class SolariumMod {
 
         ModBlocks.register(modEventBus);
 
+        ModArmorMaterials.register(modEventBus);
+
+        ModSounds.register(modEventBus);
+        ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
+
+        ModVillagers.register(modEventBus);
+
+        ModEnchantmentEffects.register(modEventBus);
+
+        ModEntities.register(modEventBus);
+
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
@@ -58,16 +88,14 @@ public class SolariumMod {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-        // Some common setup code
-        LOGGER.info("HELLO FROM COMMON SETUP");
+      event.enqueueWork(() -> {
+          ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.SOLAR_ROSE.getId(), ModBlocks.POTTED_SOLAR_ROSE);
+      });
 
-        if (Config.LOG_DIRT_BLOCK.getAsBoolean()) {
-            LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
-        }
+        ModBiomes.registerBiomes();
 
-        LOGGER.info("{}{}", Config.MAGIC_NUMBER_INTRODUCTION.get(), Config.MAGIC_NUMBER.getAsInt());
-
-        Config.ITEM_STRINGS.get().forEach((item) -> LOGGER.info("ITEM >> {}", item));
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeSolarForestRules());
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.NETHER, MOD_ID, ModSurfaceRules.makeSolarAshlandsRules());
     }
 
     // Add the example block item to the building blocks tab
@@ -83,13 +111,16 @@ public class SolariumMod {
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @EventBusSubscriber(modid = SolariumMod.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @EventBusSubscriber(modid = SolariumMod.MOD_ID)
     static class ClientModEvents {
         @SubscribeEvent
         static void onClientSetup(FMLClientSetupEvent event) {
-            // Some client setup code
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+            EntityRenderers.register(ModEntities.SOLAR_CREEPER.get(), SolarCreeperRenderer::new);
+            EntityRenderers.register(ModEntities.SOLAR_GHAST.get(), SolarGhastRenderer::new);
+            EntityRenderers.register(ModEntities.SOLAR_STALKER.get(), SolarStalkerRenderer ::new);
+
+
+            EntityRenderers.register(ModEntities.SOLAR_AXOLOTL.get(), SolarAxolotlRenderer ::new);
         }
     }
 }

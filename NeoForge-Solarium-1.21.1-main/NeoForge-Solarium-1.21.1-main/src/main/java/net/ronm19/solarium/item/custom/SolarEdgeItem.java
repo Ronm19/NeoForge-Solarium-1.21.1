@@ -26,6 +26,8 @@ public class SolarEdgeItem extends SwordItem {
         // Burn the target for 6 seconds
         target.igniteForSeconds(6);
         target.igniteForTicks(6);
+        target.setRemainingFireTicks(6);
+
 
         // Solar impact sound
         level.playSound(null, target.blockPosition(),

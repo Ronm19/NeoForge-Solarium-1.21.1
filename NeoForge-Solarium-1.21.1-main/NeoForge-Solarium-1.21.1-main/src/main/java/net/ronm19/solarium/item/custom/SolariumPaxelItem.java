@@ -27,6 +27,7 @@ import net.minecraft.world.level.gameevent.GameEvent;
 import net.neoforged.neoforge.common.ItemAbilities;
 import net.neoforged.neoforge.common.ItemAbility;
 import net.ronm19.solarium.util.ModTags;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 import java.util.Map;
@@ -73,7 +74,7 @@ public class SolariumPaxelItem extends DiggerItem {
     }
 
 
-    public InteractionResult useOn(UseOnContext pContext) {
+    public @NotNull InteractionResult useOn( UseOnContext pContext) {
         Level level = pContext.getLevel();
         BlockPos blockpos = pContext.getClickedPos();
         Player player = pContext.getPlayer();

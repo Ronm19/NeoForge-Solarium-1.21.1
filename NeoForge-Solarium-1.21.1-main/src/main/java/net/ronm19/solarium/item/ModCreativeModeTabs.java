@@ -33,32 +33,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SOLAR_APPLE);
                         output.accept(ModItems.SOLAR_TOMATO);
 
-                        output.accept(ModItems.SOLAR_TOMATO_SEEDS);
-
-                        output.accept(ModItems.SOLARIUM_SWORD);
-                        output.accept(ModItems.SOLARIUM_PICKAXE);
-                        output.accept(ModItems.SOLARIUM_AXE);
-                        output.accept(ModItems.SOLARIUM_SHOVEL);
-                        output.accept(ModItems.SOLARIUM_HOE);
-                        output.accept(ModItems.SOLARIUM_PAXEL);
-                        output.accept(ModItems.SOLARIUM_HAMMER);
-                        output.accept(ModItems.SOLAR_DAGGER);
-                        output.accept(ModItems.SOLAR_FANG);
-                        output.accept(ModItems.SOLAR_EDGE);
-
-                        output.accept(ModItems.SOLARIUM_HELMET);
-                        output.accept(ModItems.SOLARIUM_CHESTPLATE);
-                        output.accept(ModItems.SOLARIUM_LEGGINGS);
-                        output.accept(ModItems.SOLARIUM_BOOTS);
-
-                        output.accept(ModItems.SOLARIUM_HORSE_ARMOR);
-
-                        output.accept(ModItems.SOLAR_CREEPER_SPAWN_EGG);
-                        output.accept(ModItems.SOLAR_GHAST_SPAWN_EGG);
-                        output.accept(ModItems.SOLAR_STALKER_SPAWN_EGG);
-
-                        output.accept(ModItems.SOLAR_AXOLOTL_SPAWN_EGG);
-
                     }).build());
 
 
@@ -76,41 +50,6 @@ public class ModCreativeModeTabs {
                        output.accept(ModBlocks.DEEPSLATE_SOLARIUM_ORE);
 
                        output.accept(ModBlocks.SOLAR_EMBER_BLOCK);
-
-                       output.accept(ModBlocks.SOLAR_ASH_BLOCK);
-                       output.accept(ModBlocks.SOLAR_GRASS_BLOCK);
-                       output.accept(ModBlocks.SOLAR_DIRT_BLOCK);
-                       output.accept(ModBlocks.SOLAR_ROSE);
-
-                       output.accept(ModBlocks.SOLAR_AMBER_LOG);
-                       output.accept(ModBlocks.SOLAR_AMBER_WOOD);
-                       output.accept(ModBlocks.STRIPPED_SOLAR_AMBER_LOG);
-                       output.accept(ModBlocks.STRIPPED_SOLAR_AMBER_WOOD);
-                       output.accept(ModBlocks.SOLAR_AMBER_LEAVES);
-                       output.accept(ModBlocks.SOLAR_AMBER_PLANKS);
-                       output.accept(ModBlocks.SOLAR_AMBER_SAPLING);
-
-                        output.accept(ModBlocks.SOLAR_ASH_LOG);
-                        output.accept(ModBlocks.SOLAR_ASH_WOOD);
-                        output.accept(ModBlocks.STRIPPED_SOLAR_ASH_LOG);
-                        output.accept(ModBlocks.STRIPPED_SOLAR_ASH_WOOD);
-                        output.accept(ModBlocks.SOLAR_ASH_LEAVES);
-                        output.accept(ModBlocks.SOLAR_ASH_PLANKS);
-                        output.accept(ModBlocks.SOLAR_ASH_SAPLING);
-
-                       output.accept(ModBlocks.SOLAR_WORKBENCH_BLOCK);
-
-                       output.accept(ModBlocks.SOLARIUM_STAIRS);
-                       output.accept(ModBlocks.SOLARIUM_SLAB);
-                       output.accept(ModBlocks.SOLARIUM_BUTTON);
-                       output.accept(ModBlocks.SOLARIUM_PRESSURE_PLATE);
-                       output.accept(ModBlocks.SOLARIUM_FENCE);
-                       output.accept(ModBlocks.SOLARIUM_FENCE_GATE);
-                       output.accept(ModBlocks.SOLARIUM_WALL);
-                       output.accept(ModBlocks.SOLARIUM_TRAPDOOR);
-                       output.accept(ModBlocks.SOLARIUM_DOOR);
-
-                       output.accept(ModBlocks.SOLAR_LAMP_BLOCK);
 
                     }).build());
 

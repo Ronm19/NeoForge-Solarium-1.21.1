@@ -4,97 +4,16 @@
   "item.solarium.solar_apple": "Solar Apple",
   "item.solarium.solar_tomato": "Solar Tomato",
   "item.solarium.solar_ember": "Solar Ember",
-  "item.solarium.solarium_chainsaw": "Solarium Chainsaw",
-
-  "item.solarium.solar_tomato_seeds": "Solar Tomato Seeds",
-
-  "item.solarium.solarium_sword": "Solarium Sword",
-  "item.solarium.solarium_pickaxe": "Solarium Pickaxe",
-  "item.solarium.solarium_axe": "Solarium Axe",
-  "item.solarium.solarium_shovel": "Solarium Shovel",
-  "item.solarium.solarium_hoe": "Solarium Hoe",
-  "item.solarium.solarium_paxel": "Solarium Paxel",
-  "item.solarium.solarium_hammer": "Solarium Hammer",
-  "item.solarium.solar_dagger": "Solar Dagger",
-  "item.solarium.solar_fang": "Solar Fang",
-  "item.solarium.solar_edge": "Solar Edge",
-
-  "item.solarium.solarium_helmet": "Solarium Helmet",
-  "item.solarium.solarium_chestplate": "Solarium Chestplate",
-  "item.solarium.solarium_leggings": "Solarium Leggings",
-  "item.solarium.solarium_boots": "Solarium Boots",
-  "item.solarium.solarium_horse_armor": "Solarium Horse Armor",
-
-  "item.minecraft.potion.effect.solar_blessing_potion": "Solar Blessing Potion",
-  "item.minecraft.splash_potion.effect.solar_blessing_potion": "Solar Blessing Splash Potion",
-  "item.minecraft.lingering_potion.effect.solar_blessing_potion": "Solar Blessing Lingering Potion",
-  "item.minecraft.tipped_arrow.effect.solar_blessing_potion": "Arrow of Solar Blessing",
-
-  "item.solarium.solar_creeper_spawn_egg": "Solar Creeper Spawn Egg",
-  "item.solarium.solar_ghast_spawn_egg": "Solar Ghast Spawn Egg",
-  "item.solarium.solar_axolotl_spawn_egg": "Solar Axolotl Spawn Egg",
-  "item.solarium.solar_stalker_spawn_egg": "Solar Stalker Spawn Egg",
-
-  "painting.solarium.glory_of_the_solarium.title": "Glory of the Solarium",
-  "painting.solarium.glory_of_the_solarium.author": "Ronm19",
-
-  "enchantment.solarium.solar_fire": "Solar Fire",
-
 
   "block.solarium.solarium_block": "Solarium Block",
   "block.solarium.raw_solarium_block": "Raw Solarium Block",
   "block.solarium.solarium_ore": "Solarium Ore",
   "block.solarium.deepslate_solarium_ore": "Deepslate Solarium Ore",
   "block.solarium.solar_ember_block": "Solar Ember Block",
-  "block.solarium.solar_grass_block": "Solar Grass Block",
-  "block.solarium.solar_dirt_block": "Solar Dirt Block",
-  "block.solarium.solar_ash_block": "Solar Ash Block",
-  "block.solarium.solar_lamp_block": "Solar Lamp Block",
-  "block.solarium.solar_workbench_block": "Solar Workbench Block",
-
-  "block.solarium.solar_tomato_crop": "Solar Tomato Crop",
-  "block.solarium.potted_solar_rose": "Potted Solar Rose",
-  "block.solarium.solar_rose": "Solar Rose",
-
-  "block.solarium.solarium_stairs": "Solarium Stairs",
-  "block.solarium.solarium_slab": "Solarium Slab",
-  "block.solarium.solarium_pressure_plate": "Solarium Pressure Plate",
-  "block.solarium.solarium_button": "Solarium Button",
-  "block.solarium.solarium_fence": "Solarium Fence",
-  "block.solarium.solarium_fence_gate": "Solarium Fence Gate",
-  "block.solarium.solarium_wall": "Solarium Wall",
-  "block.solarium.solarium_trapdoor": "Solarium Trapdoor",
-  "block.solarium.solarium_door": "Solarium Door",
-
-  "block.solarium.solar_amber_log": "Solar Amber Log",
-  "block.solarium.solar_amber_wood": "Solar Amber Wood",
-  "block.solarium.solar_amber_planks": "Solar Amber Planks",
-  "block.solarium.stripped_solar_amber_log": "Stripped Solar Amber Log",
-  "block.solarium.stripped_solar_amber_wood": "Stripped Solar Amber Wood",
-  "block.solarium.solar_amber_leaves": "Solar Amber Leaves",
-  "block.solarium.solar_amber_sapling": "Solar Amber Sapling",
-
-  "block.solarium.solar_ash_log": "Solar Ash Log",
-  "block.solarium.solar_ash_wood": "Solar Ash Wood",
-  "block.solarium.solar_ash_planks": "Solar Ash Planks",
-  "block.solarium.stripped_solar_ash_log": "Stripped Solar Ash Log",
-  "block.solarium.stripped_solar_ash_wood": "Stripped Solar Ash Wood",
-  "block.solarium.solar_ash_leaves": "Solar Ash Leaves",
-  "block.solarium.solar_ash_sapling": "Solar Ash Sapling",
-
-  "effect.solarium.solar_blessing": "Solar Blessing",
-
-  "entity.minecraft.villager.solarium.solarger": "Solarger",
-  "entity.solarium.solar_creeper": "Solar Creeper",
-  "entity.solarium.solar_ghast": "Solar Ghast",
-  "entity.solarium.solar_axolotl": "Solar Axolotl",
-  "entity.solarium.solar_stalker": "Solar Stalker",
 
   "itemGroup.solarium.solarium_mod_items_tab": "Solarium Mod Items",
   "itemGroup.solarium.solarium_mod_blocks_tab": "Solarium Mod Blocks",
-
-
-  "tooltip.solarium.solarium_hammer.tooltip_1": "This Tool can cause distraction",
-  "tooltip.solarium.solarium_hammer.tooltip_2": "Can be useful if you need to dig a lot.",
-  "tooltip.solarium.solarium_hammer.tooltip_shift": "This thing is epic"
+  "tooltip.solariummod.solarium_hammer.tooltip_1": "This Tool can cause distraction",
+  "tooltip.solariummod.solarium_hammer.tooltip_2": "Can be useful if you need to dig a lot.",
+  "tooltip.solariummod.solarium_hammer.tooltip_shift": "This thing is epic"
 }
